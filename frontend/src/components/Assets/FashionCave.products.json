@@ -1,0 +1,1224 @@
+[{
+  "_id": {
+    "$oid": "667da26007b5d455f6975d3f"
+  },
+  "id": 1,
+  "name": "Striped Flutter Sleeve Overlap Collar Peplum Hem Blouse",
+  "image": "http://localhost:4000/images/product_1719509599054.png",
+  "category": "saree",
+  "new_price": 50,
+  "old_price": 80.5,
+  "available": true,
+  "color": "#000",
+  "date": {
+    "$date": "2024-06-27T17:33:20.578Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "667da28307b5d455f6975d42"
+  },
+  "id": 2,
+  "name": "Striped Flutter Sleeve Overlap Collar Peplum Hem Blouse",
+  "image": "http://localhost:4000/images/product_1719509635404.png",
+  "category": "saree",
+  "new_price": 85,
+  "old_price": 120.5,
+  "available": true,
+  "color": "#000",
+  "date": {
+    "$date": "2024-06-27T17:33:55.542Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "667da28707b5d455f6975d45"
+  },
+  "id": 3,
+  "name": "Striped Flutter Sleeve Overlap Collar Peplum Hem Blouse",
+  "image": "http://localhost:4000/images/product_1719509639523.png",
+  "category": "saree",
+  "new_price": 85,
+  "old_price": 120.5,
+  "available": true,
+  "color": "#000",
+  "date": {
+    "$date": "2024-06-27T17:33:59.657Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "667da29d07b5d455f6975d48"
+  },
+  "id": 4,
+  "name": "Striped Flutter Sleeve Overlap Collar Peplum Hem Blouse",
+  "image": "http://localhost:4000/images/product_1719509661057.png",
+  "category": "saree",
+  "new_price": 50,
+  "old_price": 80.5,
+  "available": true,
+  "color": "#000",
+  "date": {
+    "$date": "2024-06-27T17:34:21.208Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "667da2b507b5d455f6975d4b"
+  },
+  "id": 5,
+  "name": "Striped Flutter Sleeve Overlap Collar Peplum Hem Blouse",
+  "image": "http://localhost:4000/images/product_1719509685815.png",
+  "category": "saree",
+  "new_price": 60,
+  "old_price": 100.85,
+  "available": true,
+  "color": "#000",
+  "date": {
+    "$date": "2024-06-27T17:34:45.833Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "667da2b707b5d455f6975d4e"
+  },
+  "id": 6,
+  "name": "Striped Flutter Sleeve Overlap Collar Peplum Hem Blouse",
+  "image": "http://localhost:4000/images/product_1719509687824.png",
+  "category": "saree",
+  "new_price": 60,
+  "old_price": 100.85,
+  "available": true,
+  "color": "#000",
+  "date": {
+    "$date": "2024-06-27T17:34:47.867Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "667da2c907b5d455f6975d51"
+  },
+  "id": 7,
+  "name": "Striped Flutter Sleeve Overlap Collar Peplum Hem Blouse",
+  "image": "http://localhost:4000/images/product_1719509705658.png",
+  "category": "saree",
+  "new_price": 100,
+  "old_price": 150,
+  "available": true,
+  "color": "#000",
+  "date": {
+    "$date": "2024-06-27T17:35:05.765Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "667da2cb07b5d455f6975d54"
+  },
+  "id": 8,
+  "name": "Striped Flutter Sleeve Overlap Collar Peplum Hem Blouse",
+  "image": "http://localhost:4000/images/product_1719509707385.png",
+  "category": "saree",
+  "new_price": 100,
+  "old_price": 150,
+  "available": true,
+  "color": "#000",
+  "date": {
+    "$date": "2024-06-27T17:35:07.509Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "667da2dc07b5d455f6975d57"
+  },
+  "id": 9,
+  "name": "Striped Flutter Sleeve Overlap Collar Peplum Hem Blouse",
+  "image": "http://localhost:4000/images/product_1719509724401.png",
+  "category": "saree",
+  "new_price": 85,
+  "old_price": 120,
+  "available": true,
+  "color": "#000",
+  "date": {
+    "$date": "2024-06-27T17:35:24.435Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "667da2de07b5d455f6975d5a"
+  },
+  "id": 10,
+  "name": "Striped Flutter Sleeve Overlap Collar Peplum Hem Blouse",
+  "image": "http://localhost:4000/images/product_1719509726889.png",
+  "category": "saree",
+  "new_price": 85,
+  "old_price": 120,
+  "available": true,
+  "color": "#000",
+  "date": {
+    "$date": "2024-06-27T17:35:26.905Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "667da2f107b5d455f6975d5d"
+  },
+  "id": 11,
+  "name": "Striped Flutter Sleeve Overlap Collar Peplum Hem Blouse",
+  "image": "http://localhost:4000/images/product_1719509745944.png",
+  "category": "saree",
+  "new_price": 85,
+  "old_price": 120,
+  "available": true,
+  "color": "#000",
+  "date": {
+    "$date": "2024-06-27T17:35:45.969Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "667da2f407b5d455f6975d60"
+  },
+  "id": 12,
+  "name": "Striped Flutter Sleeve Overlap Collar Peplum Hem Blouse",
+  "image": "http://localhost:4000/images/product_1719509748152.png",
+  "category": "saree",
+  "new_price": 85,
+  "old_price": 120,
+  "available": true,
+  "color": "#000",
+  "date": {
+    "$date": "2024-06-27T17:35:48.260Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "667da30107b5d455f6975d63"
+  },
+  "id": 13,
+  "name": "Striped Flutter Sleeve Overlap Collar Peplum Hem Blouse",
+  "image": "http://localhost:4000/images/product_1719509761178.png",
+  "category": "saree",
+  "new_price": 85,
+  "old_price": 120,
+  "available": true,
+  "color": "#000",
+  "date": {
+    "$date": "2024-06-27T17:36:01.203Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "667da30307b5d455f6975d66"
+  },
+  "id": 14,
+  "name": "Striped Flutter Sleeve Overlap Collar Peplum Hem Blouse",
+  "image": "http://localhost:4000/images/product_1719509763289.png",
+  "category": "saree",
+  "new_price": 85,
+  "old_price": 120,
+  "available": true,
+  "color": "#000",
+  "date": {
+    "$date": "2024-06-27T17:36:03.303Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "667da30f07b5d455f6975d69"
+  },
+  "id": 15,
+  "name": "Striped Flutter Sleeve Overlap Collar Peplum Hem Blouse",
+  "image": "http://localhost:4000/images/product_1719509775938.png",
+  "category": "saree",
+  "new_price": 85,
+  "old_price": 120,
+  "available": true,
+  "color": "#000",
+  "date": {
+    "$date": "2024-06-27T17:36:15.952Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "667da31207b5d455f6975d6c"
+  },
+  "id": 16,
+  "name": "Striped Flutter Sleeve Overlap Collar Peplum Hem Blouse",
+  "image": "http://localhost:4000/images/product_1719509778217.png",
+  "category": "saree",
+  "new_price": 85,
+  "old_price": 120,
+  "available": true,
+  "color": "#000",
+  "date": {
+    "$date": "2024-06-27T17:36:18.347Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "667da31f07b5d455f6975d6f"
+  },
+  "id": 17,
+  "name": "Striped Flutter Sleeve Overlap Collar Peplum Hem Blouse",
+  "image": "http://localhost:4000/images/product_1719509791041.png",
+  "category": "saree",
+  "new_price": 85,
+  "old_price": 120,
+  "available": true,
+  "color": "#000",
+  "date": {
+    "$date": "2024-06-27T17:36:31.058Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "667da32007b5d455f6975d72"
+  },
+  "id": 18,
+  "name": "Striped Flutter Sleeve Overlap Collar Peplum Hem Blouse",
+  "image": "http://localhost:4000/images/product_1719509792673.png",
+  "category": "saree",
+  "new_price": 85,
+  "old_price": 120,
+  "available": true,
+  "color": "#000",
+  "date": {
+    "$date": "2024-06-27T17:36:32.687Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "667da32a07b5d455f6975d75"
+  },
+  "id": 19,
+  "name": "Striped Flutter Sleeve Overlap Collar Peplum Hem Blouse",
+  "image": "http://localhost:4000/images/product_1719509802664.png",
+  "category": "saree",
+  "new_price": 85,
+  "old_price": 120,
+  "available": true,
+  "color": "#000",
+  "date": {
+    "$date": "2024-06-27T17:36:42.682Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "667da32c07b5d455f6975d78"
+  },
+  "id": 20,
+  "name": "Striped Flutter Sleeve Overlap Collar Peplum Hem Blouse",
+  "image": "http://localhost:4000/images/product_1719509804433.png",
+  "category": "saree",
+  "new_price": 85,
+  "old_price": 120,
+  "available": true,
+  "color": "#000",
+  "date": {
+    "$date": "2024-06-27T17:36:44.445Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "667da33807b5d455f6975d7b"
+  },
+  "id": 21,
+  "name": "Striped Flutter Sleeve Overlap Collar Peplum Hem Blouse",
+  "image": "http://localhost:4000/images/product_1719509816625.png",
+  "category": "saree",
+  "new_price": 85,
+  "old_price": 120,
+  "available": true,
+  "color": "#000",
+  "date": {
+    "$date": "2024-06-27T17:36:56.641Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "667da33a07b5d455f6975d7e"
+  },
+  "id": 22,
+  "name": "Striped Flutter Sleeve Overlap Collar Peplum Hem Blouse",
+  "image": "http://localhost:4000/images/product_1719509818841.png",
+  "category": "saree",
+  "new_price": 85,
+  "old_price": 120,
+  "available": true,
+  "color": "#000",
+  "date": {
+    "$date": "2024-06-27T17:36:58.852Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "667da34307b5d455f6975d81"
+  },
+  "id": 23,
+  "name": "Striped Flutter Sleeve Overlap Collar Peplum Hem Blouse",
+  "image": "http://localhost:4000/images/product_1719509827776.png",
+  "category": "saree",
+  "new_price": 85,
+  "old_price": 120,
+  "available": true,
+  "color": "#000",
+  "date": {
+    "$date": "2024-06-27T17:37:07.792Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "667da34507b5d455f6975d84"
+  },
+  "id": 24,
+  "name": "Striped Flutter Sleeve Overlap Collar Peplum Hem Blouse",
+  "image": "http://localhost:4000/images/product_1719509829642.png",
+  "category": "saree",
+  "new_price": 85,
+  "old_price": 120,
+  "available": true,
+  "color": "#000",
+  "date": {
+    "$date": "2024-06-27T17:37:09.653Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "667da36607b5d455f6975d87"
+  },
+  "id": 25,
+  "name": "jewellery Green Solid Zippered Full-Zip Slim Fit Bomber Jacket",
+  "image": "http://localhost:4000/images/product_1719509862423.png",
+  "category": "jewellery",
+  "new_price": 85,
+  "old_price": 120,
+  "available": true,
+  "color": "#000",
+  "date": {
+    "$date": "2024-06-27T17:37:42.438Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "667da36807b5d455f6975d8a"
+  },
+  "id": 26,
+  "name": "jewellery Green Solid Zippered Full-Zip Slim Fit Bomber Jacket",
+  "image": "http://localhost:4000/images/product_1719509864552.png",
+  "category": "jewellery",
+  "new_price": 85,
+  "old_price": 120,
+  "available": true,
+  "color": "#000",
+  "date": {
+    "$date": "2024-06-27T17:37:44.562Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "667da37107b5d455f6975d8d"
+  },
+  "id": 27,
+  "name": "jewellery Green Solid Zippered Full-Zip Slim Fit Bomber Jacket",
+  "image": "http://localhost:4000/images/product_1719509873983.png",
+  "category": "jewellery",
+  "new_price": 85,
+  "old_price": 120,
+  "available": true,
+  "color": "#000",
+  "date": {
+    "$date": "2024-06-27T17:37:53.999Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "667da37307b5d455f6975d90"
+  },
+  "id": 28,
+  "name": "jewellery Green Solid Zippered Full-Zip Slim Fit Bomber Jacket",
+  "image": "http://localhost:4000/images/product_1719509875896.png",
+  "category": "jewellery",
+  "new_price": 85,
+  "old_price": 120,
+  "available": true,
+  "color": "#000",
+  "date": {
+    "$date": "2024-06-27T17:37:55.909Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "667da37c07b5d455f6975d93"
+  },
+  "id": 29,
+  "name": "jewellery Green Solid Zippered Full-Zip Slim Fit Bomber Jacket",
+  "image": "http://localhost:4000/images/product_1719509884777.png",
+  "category": "jewellery",
+  "new_price": 85,
+  "old_price": 120,
+  "available": true,
+  "color": "#000",
+  "date": {
+    "$date": "2024-06-27T17:38:04.792Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "667da37e07b5d455f6975d96"
+  },
+  "id": 30,
+  "name": "jewellery Green Solid Zippered Full-Zip Slim Fit Bomber Jacket",
+  "image": "http://localhost:4000/images/product_1719509886848.png",
+  "category": "jewellery",
+  "new_price": 85,
+  "old_price": 120,
+  "available": true,
+  "color": "#000",
+  "date": {
+    "$date": "2024-06-27T17:38:06.862Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "667da38807b5d455f6975d99"
+  },
+  "id": 31,
+  "name": "jewellery Green Solid Zippered Full-Zip Slim Fit Bomber Jacket",
+  "image": "http://localhost:4000/images/product_1719509896115.png",
+  "category": "jewellery",
+  "new_price": 85,
+  "old_price": 120,
+  "available": true,
+  "color": "#000",
+  "date": {
+    "$date": "2024-06-27T17:38:16.128Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "667da38a07b5d455f6975d9c"
+  },
+  "id": 32,
+  "name": "jewellery Green Solid Zippered Full-Zip Slim Fit Bomber Jacket",
+  "image": "http://localhost:4000/images/product_1719509898000.png",
+  "category": "jewellery",
+  "new_price": 85,
+  "old_price": 120,
+  "available": true,
+  "color": "#000",
+  "date": {
+    "$date": "2024-06-27T17:38:18.012Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "667da39307b5d455f6975d9f"
+  },
+  "id": 33,
+  "name": "jewellery Green Solid Zippered Full-Zip Slim Fit Bomber Jacket",
+  "image": "http://localhost:4000/images/product_1719509907208.png",
+  "category": "jewellery",
+  "new_price": 85,
+  "old_price": 120,
+  "available": true,
+  "color": "#000",
+  "date": {
+    "$date": "2024-06-27T17:38:27.228Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "667da39507b5d455f6975da2"
+  },
+  "id": 34,
+  "name": "jewellery Green Solid Zippered Full-Zip Slim Fit Bomber Jacket",
+  "image": "http://localhost:4000/images/product_1719509909176.png",
+  "category": "jewellery",
+  "new_price": 85,
+  "old_price": 120,
+  "available": true,
+  "color": "#000",
+  "date": {
+    "$date": "2024-06-27T17:38:29.188Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "667da3a007b5d455f6975da5"
+  },
+  "id": 35,
+  "name": "jewellery Green Solid Zippered Full-Zip Slim Fit Bomber Jacket",
+  "image": "http://localhost:4000/images/product_1719509920248.png",
+  "category": "jewellery",
+  "new_price": 85,
+  "old_price": 120,
+  "available": true,
+  "color": "#000",
+  "date": {
+    "$date": "2024-06-27T17:38:40.262Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "667da3a207b5d455f6975da8"
+  },
+  "id": 36,
+  "name": "jewellery Green Solid Zippered Full-Zip Slim Fit Bomber Jacket",
+  "image": "http://localhost:4000/images/product_1719509922017.png",
+  "category": "jewellery",
+  "new_price": 85,
+  "old_price": 120,
+  "available": true,
+  "color": "#000",
+  "date": {
+    "$date": "2024-06-27T17:38:42.030Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "667da3ac07b5d455f6975dab"
+  },
+  "id": 37,
+  "name": "jewellery Green Solid Zippered Full-Zip Slim Fit Bomber Jacket",
+  "image": "http://localhost:4000/images/product_1719509932968.png",
+  "category": "jewellery",
+  "new_price": 85,
+  "old_price": 120,
+  "available": true,
+  "color": "#000",
+  "date": {
+    "$date": "2024-06-27T17:38:52.984Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "667da3ae07b5d455f6975dae"
+  },
+  "id": 38,
+  "name": "jewellery Green Solid Zippered Full-Zip Slim Fit Bomber Jacket",
+  "image": "http://localhost:4000/images/product_1719509934624.png",
+  "category": "jewellery",
+  "new_price": 85,
+  "old_price": 120,
+  "available": true,
+  "color": "#000",
+  "date": {
+    "$date": "2024-06-27T17:38:54.635Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "667da3b707b5d455f6975db1"
+  },
+  "id": 39,
+  "name": "jewellery Green Solid Zippered Full-Zip Slim Fit Bomber Jacket",
+  "image": "http://localhost:4000/images/product_1719509943310.png",
+  "category": "jewellery",
+  "new_price": 85,
+  "old_price": 120,
+  "available": true,
+  "color": "#000",
+  "date": {
+    "$date": "2024-06-27T17:39:03.327Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "667da3b907b5d455f6975db4"
+  },
+  "id": 40,
+  "name": "jewellery Green Solid Zippered Full-Zip Slim Fit Bomber Jacket",
+  "image": "http://localhost:4000/images/product_1719509945000.png",
+  "category": "jewellery",
+  "new_price": 85,
+  "old_price": 120,
+  "available": true,
+  "color": "#000",
+  "date": {
+    "$date": "2024-06-27T17:39:05.285Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "667da3c207b5d455f6975db7"
+  },
+  "id": 41,
+  "name": "jewellery Green Solid Zippered Full-Zip Slim Fit Bomber Jacket",
+  "image": "http://localhost:4000/images/product_1719509954933.png",
+  "category": "jewellery",
+  "new_price": 85,
+  "old_price": 120,
+  "available": true,
+  "color": "#000",
+  "date": {
+    "$date": "2024-06-27T17:39:14.947Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "667da3c507b5d455f6975dba"
+  },
+  "id": 42,
+  "name": "jewellery Green Solid Zippered Full-Zip Slim Fit Bomber Jacket",
+  "image": "http://localhost:4000/images/product_1719509957064.png",
+  "category": "jewellery",
+  "new_price": 85,
+  "old_price": 120,
+  "available": true,
+  "color": "#000",
+  "date": {
+    "$date": "2024-06-27T17:39:17.075Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "667da3ce07b5d455f6975dbd"
+  },
+  "id": 43,
+  "name": "jewellery Green Solid Zippered Full-Zip Slim Fit Bomber Jacket",
+  "image": "http://localhost:4000/images/product_1719509966456.png",
+  "category": "jewellery",
+  "new_price": 85,
+  "old_price": 120,
+  "available": true,
+  "color": "#000",
+  "date": {
+    "$date": "2024-06-27T17:39:26.468Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "667da3d007b5d455f6975dc0"
+  },
+  "id": 44,
+  "name": "jewellery Green Solid Zippered Full-Zip Slim Fit Bomber Jacket",
+  "image": "http://localhost:4000/images/product_1719509968192.png",
+  "category": "jewellery",
+  "new_price": 85,
+  "old_price": 120,
+  "available": true,
+  "color": "#000",
+  "date": {
+    "$date": "2024-06-27T17:39:28.206Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "667da3d807b5d455f6975dc3"
+  },
+  "id": 45,
+  "name": "jewellery Green Solid Zippered Full-Zip Slim Fit Bomber Jacket",
+  "image": "http://localhost:4000/images/product_1719509975991.png",
+  "category": "jewellery",
+  "new_price": 85,
+  "old_price": 120,
+  "available": true,
+  "color": "#000",
+  "date": {
+    "$date": "2024-06-27T17:39:36.011Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "667da3d907b5d455f6975dc6"
+  },
+  "id": 46,
+  "name": "jewellery Green Solid Zippered Full-Zip Slim Fit Bomber Jacket",
+  "image": "http://localhost:4000/images/product_1719509977624.png",
+  "category": "jewellery",
+  "new_price": 85,
+  "old_price": 120,
+  "available": true,
+  "color": "#000",
+  "date": {
+    "$date": "2024-06-27T17:39:37.639Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "667da3e207b5d455f6975dc9"
+  },
+  "id": 47,
+  "name": "jewellery Green Solid Zippered Full-Zip Slim Fit Bomber Jacket",
+  "image": "http://localhost:4000/images/product_1719509986280.png",
+  "category": "jewellery",
+  "new_price": 85,
+  "old_price": 120,
+  "available": true,
+  "color": "#000",
+  "date": {
+    "$date": "2024-06-27T17:39:46.293Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "667da3e307b5d455f6975dcc"
+  },
+  "id": 48,
+  "name": "jewellery Green Solid Zippered Full-Zip Slim Fit Bomber Jacket",
+  "image": "http://localhost:4000/images/product_1719509987567.png",
+  "category": "jewellery",
+  "new_price": 85,
+  "old_price": 120,
+  "available": true,
+  "color": "#000",
+  "date": {
+    "$date": "2024-06-27T17:39:47.580Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "667da3ed07b5d455f6975dcf"
+  },
+  "id": 49,
+  "name": "jewellery Green Solid Zippered Full-Zip Slim Fit Bomber Jacket",
+  "image": "http://localhost:4000/images/product_1719509997036.png",
+  "category": "jewellery",
+  "new_price": 85,
+  "old_price": 120,
+  "available": true,
+  "color": "#000",
+  "date": {
+    "$date": "2024-06-27T17:39:57.050Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "667da3ee07b5d455f6975dd2"
+  },
+  "id": 50,
+  "name": "jewellery Green Solid Zippered Full-Zip Slim Fit Bomber Jacket",
+  "image": "http://localhost:4000/images/product_1719509998472.png",
+  "category": "jewellery",
+  "new_price": 85,
+  "old_price": 120,
+  "available": true,
+  "color": "#000",
+  "date": {
+    "$date": "2024-06-27T17:39:58.485Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "667da40607b5d455f6975dd5"
+  },
+  "id": 51,
+  "name": "Boys Orange Colourblocked Hooded Sweatshirt",
+  "image": "http://localhost:4000/images/product_1719510022361.png",
+  "category": "dresses",
+  "new_price": 85,
+  "old_price": 120,
+  "available": true,
+  "color": "#000",
+  "date": {
+    "$date": "2024-06-27T17:40:22.376Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "667da40707b5d455f6975dd8"
+  },
+  "id": 52,
+  "name": "Boys Orange Colourblocked Hooded Sweatshirt",
+  "image": "http://localhost:4000/images/product_1719510023952.png",
+  "category": "dresses",
+  "new_price": 85,
+  "old_price": 120,
+  "available": true,
+  "color": "#000",
+  "date": {
+    "$date": "2024-06-27T17:40:23.965Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "667da41707b5d455f6975ddb"
+  },
+  "id": 53,
+  "name": "Boys Orange Colourblocked Hooded Sweatshirt",
+  "image": "http://localhost:4000/images/product_1719510039937.png",
+  "category": "dresses",
+  "new_price": 85,
+  "old_price": 120,
+  "available": true,
+  "color": "#000",
+  "date": {
+    "$date": "2024-06-27T17:40:39.953Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "667da41907b5d455f6975dde"
+  },
+  "id": 54,
+  "name": "Boys Orange Colourblocked Hooded Sweatshirt",
+  "image": "http://localhost:4000/images/product_1719510041584.png",
+  "category": "dresses",
+  "new_price": 85,
+  "old_price": 120,
+  "available": true,
+  "color": "#000",
+  "date": {
+    "$date": "2024-06-27T17:40:41.597Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "667da42107b5d455f6975de1"
+  },
+  "id": 55,
+  "name": "Boys Orange Colourblocked Hooded Sweatshirt",
+  "image": "http://localhost:4000/images/product_1719510049442.png",
+  "category": "dresses",
+  "new_price": 85,
+  "old_price": 120,
+  "available": true,
+  "color": "#000",
+  "date": {
+    "$date": "2024-06-27T17:40:49.458Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "667da42307b5d455f6975de4"
+  },
+  "id": 56,
+  "name": "Boys Orange Colourblocked Hooded Sweatshirt",
+  "image": "http://localhost:4000/images/product_1719510051193.png",
+  "category": "dresses",
+  "new_price": 85,
+  "old_price": 120,
+  "available": true,
+  "color": "#000",
+  "date": {
+    "$date": "2024-06-27T17:40:51.211Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "667da42a07b5d455f6975de7"
+  },
+  "id": 57,
+  "name": "Boys Orange Colourblocked Hooded Sweatshirt",
+  "image": "http://localhost:4000/images/product_1719510058632.png",
+  "category": "dresses",
+  "new_price": 85,
+  "old_price": 120,
+  "available": true,
+  "color": "#000",
+  "date": {
+    "$date": "2024-06-27T17:40:58.647Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "667da42c07b5d455f6975dea"
+  },
+  "id": 58,
+  "name": "Boys Orange Colourblocked Hooded Sweatshirt",
+  "image": "http://localhost:4000/images/product_1719510060930.png",
+  "category": "dresses",
+  "new_price": 85,
+  "old_price": 120,
+  "available": true,
+  "color": "#000",
+  "date": {
+    "$date": "2024-06-27T17:41:00.946Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "667da43a07b5d455f6975ded"
+  },
+  "id": 59,
+  "name": "Boys Orange Colourblocked Hooded Sweatshirt",
+  "image": "http://localhost:4000/images/product_1719510074168.png",
+  "category": "dresses",
+  "new_price": 85,
+  "old_price": 120,
+  "available": true,
+  "color": "#000",
+  "date": {
+    "$date": "2024-06-27T17:41:14.184Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "667da43b07b5d455f6975df0"
+  },
+  "id": 60,
+  "name": "Boys Orange Colourblocked Hooded Sweatshirt",
+  "image": "http://localhost:4000/images/product_1719510075977.png",
+  "category": "dresses",
+  "new_price": 85,
+  "old_price": 120,
+  "available": true,
+  "color": "#000",
+  "date": {
+    "$date": "2024-06-27T17:41:15.990Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "667da44507b5d455f6975df3"
+  },
+  "id": 61,
+  "name": "Boys Orange Colourblocked Hooded Sweatshirt",
+  "image": "http://localhost:4000/images/product_1719510085019.png",
+  "category": "dresses",
+  "new_price": 85,
+  "old_price": 120,
+  "available": true,
+  "color": "#000",
+  "date": {
+    "$date": "2024-06-27T17:41:25.033Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "667da44707b5d455f6975df6"
+  },
+  "id": 62,
+  "name": "Boys Orange Colourblocked Hooded Sweatshirt",
+  "image": "http://localhost:4000/images/product_1719510087101.png",
+  "category": "dresses",
+  "new_price": 85,
+  "old_price": 120,
+  "available": true,
+  "color": "#000",
+  "date": {
+    "$date": "2024-06-27T17:41:27.115Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "667da45307b5d455f6975df9"
+  },
+  "id": 63,
+  "name": "Boys Orange Colourblocked Hooded Sweatshirt",
+  "image": "http://localhost:4000/images/product_1719510099930.png",
+  "category": "dresses",
+  "new_price": 85,
+  "old_price": 120,
+  "available": true,
+  "color": "#000",
+  "date": {
+    "$date": "2024-06-27T17:41:39.946Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "667da45507b5d455f6975dfc"
+  },
+  "id": 64,
+  "name": "Boys Orange Colourblocked Hooded Sweatshirt",
+  "image": "http://localhost:4000/images/product_1719510101537.png",
+  "category": "dresses",
+  "new_price": 85,
+  "old_price": 120,
+  "available": true,
+  "color": "#000",
+  "date": {
+    "$date": "2024-06-27T17:41:41.549Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "667da45d07b5d455f6975dff"
+  },
+  "id": 65,
+  "name": "Boys Orange Colourblocked Hooded Sweatshirt",
+  "image": "http://localhost:4000/images/product_1719510109962.png",
+  "category": "dresses",
+  "new_price": 85,
+  "old_price": 120,
+  "available": true,
+  "color": "#000",
+  "date": {
+    "$date": "2024-06-27T17:41:49.979Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "667da45f07b5d455f6975e02"
+  },
+  "id": 66,
+  "name": "Boys Orange Colourblocked Hooded Sweatshirt",
+  "image": "http://localhost:4000/images/product_1719510111376.png",
+  "category": "dresses",
+  "new_price": 85,
+  "old_price": 120,
+  "available": true,
+  "color": "#000",
+  "date": {
+    "$date": "2024-06-27T17:41:51.390Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "667da46607b5d455f6975e05"
+  },
+  "id": 67,
+  "name": "Boys Orange Colourblocked Hooded Sweatshirt",
+  "image": "http://localhost:4000/images/product_1719510118898.png",
+  "category": "dresses",
+  "new_price": 85,
+  "old_price": 120,
+  "available": true,
+  "color": "#000",
+  "date": {
+    "$date": "2024-06-27T17:41:58.918Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "667da46807b5d455f6975e08"
+  },
+  "id": 68,
+  "name": "Boys Orange Colourblocked Hooded Sweatshirt",
+  "image": "http://localhost:4000/images/product_1719510120512.png",
+  "category": "dresses",
+  "new_price": 85,
+  "old_price": 120,
+  "available": true,
+  "color": "#000",
+  "date": {
+    "$date": "2024-06-27T17:42:00.525Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "667da47007b5d455f6975e0b"
+  },
+  "id": 69,
+  "name": "Boys Orange Colourblocked Hooded Sweatshirt",
+  "image": "http://localhost:4000/images/product_1719510128888.png",
+  "category": "dresses",
+  "new_price": 85,
+  "old_price": 120,
+  "available": true,
+  "color": "#000",
+  "date": {
+    "$date": "2024-06-27T17:42:08.905Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "667da47207b5d455f6975e0e"
+  },
+  "id": 70,
+  "name": "Boys Orange Colourblocked Hooded Sweatshirt",
+  "image": "http://localhost:4000/images/product_1719510130648.png",
+  "category": "dresses",
+  "new_price": 85,
+  "old_price": 120,
+  "available": true,
+  "color": "#000",
+  "date": {
+    "$date": "2024-06-27T17:42:10.663Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "667da47a07b5d455f6975e11"
+  },
+  "id": 71,
+  "name": "Boys Orange Colourblocked Hooded Sweatshirt",
+  "image": "http://localhost:4000/images/product_1719510138819.png",
+  "category": "dresses",
+  "new_price": 85,
+  "old_price": 120,
+  "available": true,
+  "color": "#000",
+  "date": {
+    "$date": "2024-06-27T17:42:18.837Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "667da47c07b5d455f6975e14"
+  },
+  "id": 72,
+  "name": "Boys Orange Colourblocked Hooded Sweatshirt",
+  "image": "http://localhost:4000/images/product_1719510140248.png",
+  "category": "dresses",
+  "new_price": 85,
+  "old_price": 120,
+  "available": true,
+  "color": "#000",
+  "date": {
+    "$date": "2024-06-27T17:42:20.270Z"
+  },
+  "__v": 0
+}]

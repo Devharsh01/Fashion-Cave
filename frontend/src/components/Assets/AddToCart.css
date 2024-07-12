@@ -1,0 +1,73 @@
+.button {
+    height: 70px;
+    width: 200px;
+    background-color: #e21919;
+    border: 2px solid rgb(182, 128, 128);
+    color: #eee;
+    transition: .5s;
+    font-size: 18px;
+    font-weight: 600;
+    color: white;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    /* padding: 20px; */
+    overflow: hidden;
+  }
+  
+  .button span {
+    transition: .5s;
+    transform: translateX(10px)
+  }
+  
+  .button svg {
+    transform: translateX(-300px);
+    transition: .5s;
+    z-index: 3;
+    height: 25px;
+  } 
+  
+  .button:hover {
+    background-color: rgba(51, 34, 51, 0.815);
+    box-shadow: 10px 10px 30px 10px #bdbdbd,-10px -10px 30px 10px #bdbdbd;
+  }
+  
+  .button:hover svg {
+    transform: translateX(0px);
+  }
+  
+  .button:hover span {
+    transform: translateX(200px);
+    font-size: .1rem;
+  }
+
+@media(max-width: 1024px) {
+  .button{
+    width: 180px;
+  }
+  .button span{
+    font-size: 18px;
+  }
+}
+
+@media(max-width: 800px) {
+  .button{
+    width: 130px;
+    height: 50px;
+  }
+  .button span{
+    font-size: 14px;
+  }
+}
+
+@media(max-width: 600px) {
+  .button{
+    width: 180px;
+    height: 70px;
+  }
+  .button span{
+    font-size: 16px;
+  }
+}

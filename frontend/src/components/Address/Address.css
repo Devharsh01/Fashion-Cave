@@ -1,0 +1,202 @@
+.address{
+    padding: 5px 20px 15px;
+    gap: 10px;
+    background-color: rgb(204, 206, 230);
+    border-radius: 10px;
+}
+
+.address p{
+    font-size: 18px;
+    padding-top: 10px;
+}
+  
+.input-error {
+    border: none;
+    border-bottom: 2px red solid;
+}
+
+.no-error{
+    border: none;
+    border-bottom: 2px rgb(0, 0, 0) solid;
+}
+
+.name-box{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 20px;
+}
+
+.adress-mobile{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+}
+
+.coolinput {
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    position: static;
+}
+  
+.coolinput label.text {
+    font-size: 1.0rem;
+    color: rgb(91, 101, 211);
+    font-weight: 700;
+    position: relative;
+    top: 0.5rem;
+    margin: 0 0 0 7px;
+    padding: 0 3px;
+    background: transparent;
+    width: fit-content;
+}
+  
+.coolinput input[type=text].input {
+    padding: 11px 10px;
+    font-size: 1.0rem;
+    border-radius: 5px;
+    width: 14.5vw;
+    background: transparent;
+}
+  
+.coolinput input[type=text].input:focus {
+    outline: none;
+}
+
+.coolinput input[type=text].input.loc{
+    width: 49vw;
+}
+
+.second-row{
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    align-items: center;
+}
+
+.coolinput input[type=text].input.sr{
+    width: 23vw;
+}
+
+.coolinput input[type=text].input.mb{
+    width: 15%;
+    margin-top: 25px;
+}
+
+.coolinput.mo{
+    margin-left: -25%;
+}
+
+.phone-box{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.third-row{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    align-items: center;
+}
+
+.address-button {
+    font-weight: bold;
+    color: black;
+    margin-top: 20px;
+    background-color: rgb(207, 226, 228);
+    padding: 1em 2em;
+    border: none;
+    font-size: 16px;
+    border-radius: .6rem;
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+    border: 2px rgb(91, 101, 211) solid ;
+  }
+  
+  .address-button span:not(:nth-child(6)) {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    height: 30px;
+    width: 35px;
+    background-color: rgb(53, 67, 224);
+    border-radius: 50%;
+    transition: .6s ease;
+  }
+  
+  .address-button span:nth-child(6) {
+    position: relative;
+  }
+  
+  .address-button span:nth-child(1) {
+    transform: translate(-3.3em, -4em);
+  }
+  
+  .address-button span:nth-child(2) {
+    transform: translate(-6em, 1.3em);
+  }
+  
+  .address-button span:nth-child(3) {
+    transform: translate(-.2em, 1.8em);
+  }
+  
+  .address-button span:nth-child(4) {
+    transform: translate(3.5em, 1.4em);
+  }
+  
+  .address-button span:nth-child(5) {
+    transform: translate(3.5em, -3.8em);
+  }
+  
+  .address-button:hover span:not(:nth-child(6)) {
+    transform: translate(-50%, -50%) scale(4);
+    transition: 1.5s ease;
+  }
+    
+@media (max-width: 1024px) and (min-width: 800px){
+    .address p{
+        font-size: 16px;
+    }
+    .coolinput.mo{
+        margin-left: -30%;
+    } 
+    .coolinput input[type=text].input{
+        font-size: 0.85rem;
+    }
+}
+
+@media (max-width: 800px) {
+    .coolinput input[type=text].input{
+        width: 23.7vw;
+    }
+    .coolinput input[type=text].input.loc{
+        width: 80vw;
+    }
+    .coolinput input[type=text].input.sr{
+        width: 37.5vw;
+    }
+}
+
+@media (max-width: 600px) {
+    .address p{
+        font-size: 14px;
+    }
+    .coolinput label.text{
+        font-size: 0.75rem;
+    }
+    .coolinput input[type=text].input{
+        font-size: 0.75rem;
+        width: 21vw;
+    }
+    .coolinput input[type=text].input.loc{
+        width: 75vw;
+    }
+    .coolinput input[type=text].input.sr{
+        width: 32.5vw;
+    }
+}

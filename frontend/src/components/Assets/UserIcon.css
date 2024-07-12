@@ -1,0 +1,16 @@
+/* IconComponent.css */
+
+.icon-container {
+    color: #6b7280; /* Tailwind's text-gray-500 */
+    transition: all 0.3s ease; /* Tailwind's transition-all */
+  }
+  
+  .icon-container:hover {
+    transform: scale(1.10); /* Tailwind's group-hover:scale-105 */
+  }
+  
+  .icon {
+    width: 3.5rem; /* Tailwind's w-16 */
+    height: 3.5rem; /* Tailwind's h-16 */
+  }
+  

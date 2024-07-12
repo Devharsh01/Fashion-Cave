@@ -1,0 +1,400 @@
+.information{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin-left: 5vw; 
+    width: 100vw;
+    padding-bottom: 50px;
+    opacity: 0;
+    position: relative;
+}
+
+@keyframes reveal{
+    from{
+        transform: scale(0.8);
+    }
+    to{
+        transform: scale(1);
+    }
+}
+
+.active{
+    animation: reveal 0.6s ease-in-out 0s;
+    opacity: 1;
+    transition: all 0.6s ease-in-out;
+}
+
+/*Left Information Box*/
+.informationLeft{
+    border: 4px solid white;
+    color: white;
+    height: 90%;
+    width: 70%;
+    display: flex;
+    font-size: 22px;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.5s ease;
+}
+
+.informationLeft img{
+    width: 100%;
+    height: 100%;
+}
+
+.informationLeft h1{
+    transition: all 0.5s ease;
+    position: absolute;
+    z-index: 9;
+}
+
+.informationLeft::after {           /* Add pseudo-element to create overlay */
+    content: ""; 
+    position: absolute;
+    height: 82%;
+    width: 23.45%;
+    background: linear-gradient(180deg, #25252522 0%, #663030 50%);
+    opacity: 0; /* Initially transparent */
+    transition: all 0.5s ease-in-out; /* Smooth transition on hover */
+}
+
+.informationLeft::before{       /* Unline text on hover */
+    content: "At Fashion Cave, we aim to deliver the highest quality fashion at affordable prices to customers worldwide.\AWe are committed to never compromising on our standards. We ensure to continually provide exceptional value and style, making luxury accessible to all.";
+    white-space: pre-wrap;
+    font-family: "EB Garamond", serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 21px;
+    position: absolute;
+    height: 82%;
+    width: 19.45%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    text-align: center;
+    z-index: 15;
+    opacity: 0;
+    transition: all 0.5s ease;
+}
+
+.informationLeft.hovered::after{
+    opacity: 0.9;
+}
+
+.informationLeft.hovered::before{
+    opacity: 1;
+}
+
+.informationLeft.hovered h1{
+    margin-top: -8em;
+}
+
+/*Middle Information Box*/
+.informationMiddle{
+    border: 4px solid white;
+    color: rgb(255, 255, 255);
+    font-size: 22px;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    height: 90%;
+    width: 70%;
+    transition: all 0.5s ease;
+}
+
+.informationMiddle img{
+    width: 100%;
+    height: 100%;
+}
+
+.informationMiddle h1{
+    transition: all 0.5s ease;
+    position: absolute;
+    z-index: 9;
+}
+
+.informationMiddle::after {           /* Add pseudo-element to create overlay */
+    content: ""; 
+    position: absolute;
+    height: 82%;
+    width: 23.45%;
+    background: linear-gradient(180deg, #25252522 0%, #817c38 50%);
+    opacity: 0; /* Initially transparent */
+    transition: all 0.5s ease-in-out; /* Smooth transition on hover */
+}
+
+.informationMiddle::before{       /* Unline text on hover */
+    font-family: "EB Garamond", serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 21px;
+    content: "We are dedicated to redefining fashion by offering the quality products at affordable prices.\AWe pride ourselves on our unwavering commitment to excellence, ensuring that every piece meets our strict quality standards.Join us as we bring style and affordability together, making luxury available to all."; 
+    white-space: pre-wrap;
+    position: absolute;
+    height: 82%;
+    width: 19.45%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    text-align: center;
+    z-index: 15;
+    opacity: 0;
+    transition: all 0.5s ease;
+}
+
+.informationMiddle.hovered::after{
+    opacity: 0.9;
+}
+
+.informationMiddle.hovered::before{
+    opacity: 1;
+}
+
+.informationMiddle.hovered h1{
+    margin-top: -8em;
+}
+
+/*Right Information Box*/
+.informationRight{
+    border: 4px solid white;
+    font-size: 22px;
+    color: white;
+    display: flex;
+    align-items: center;
+    height: 90%;
+    width: 70%;
+    justify-content: center;
+    transition: all 0.5s ease;
+    
+}
+
+.informationRight h1{
+    transition: all 0.5s ease;
+    position: absolute;
+    z-index: 9;
+}
+
+.informationRight img{
+    width: 100%;
+    height: 100%;
+}
+
+.informationRight::after {           /* Add pseudo-element to create overlay */
+    content: ""; 
+    position: absolute;
+    height: 82%;
+    width: 23.45%;
+    background: linear-gradient(180deg, #25252522 0%, #344c6e 50%);
+    opacity: 0; /* Initially transparent */
+    transition: all 0.5s ease-in-out; /* Smooth transition on hover */
+}
+
+.informationRight::before{       /* Unline text on hover */
+    content: "We currently operate exclusively online, providing a seamless and convenient shopping experience for our customers worldwide. While we do not have any physical stores at the moment, we are actively exploring opportunities to open our first offline store soon.";
+    white-space: pre-wrap;
+    font-family: "EB Garamond", serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 21px;
+    position: absolute;
+    height: 82%;
+    width: 19.45%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    text-align: center;
+    z-index: 15;
+    opacity: 0;
+    transition: all 0.5s ease;
+}
+
+.informationRight.hovered::after{
+    opacity: 0.9;
+}
+
+.informationRight.hovered::before{
+    opacity: 1;
+}
+
+.informationRight.hovered h1{
+    margin-top: -8em;
+}
+
+@media(max-width:1220px){
+    .informationLeft::before{
+        font-size: 18px;
+        height: 81%;
+    }
+    .informationMiddle::before{
+        font-size: 18px;
+        height: 81%;
+    }
+    .informationRight::before{
+        font-size: 19px;
+        height: 81%;
+    }
+    .informationLeft::after{
+        height: 81%;
+    }
+    .informationMiddle::after{
+        height: 81%;
+    }
+    .informationRight::after{
+        height: 81%;
+    }
+    .informationLeft.hovered h1{
+        margin-top: -7em;
+    }
+    .informationMiddle.hovered h1{
+        margin-top: -7em;
+    }
+    .informationRight.hovered h1{
+        margin-top: -7em;
+    }
+}
+
+@media(max-width:1024px){
+    .informationLeft::before{
+        font-size: 16px;
+        height: 80%;
+    }
+    .informationMiddle::before{
+        font-size: 16px;
+        height: 80%;
+    }
+    .informationRight::before{
+        font-size: 16px;
+        height: 80%;
+    }
+    .informationLeft::after{
+        height: 80%;
+    }
+    .informationMiddle::after{
+        height: 80%;
+    }
+    .informationRight::after{
+        height: 80%;
+    }
+    .informationLeft.hovered h1{
+        margin-top: -6em;
+    }
+    .informationMiddle.hovered h1{
+        margin-top: -6em;
+    }
+    .informationRight.hovered h1{
+        margin-top: -6em;
+    }
+}
+
+@media(max-width:800px){
+    .informationLeft h1{
+        font-size: 37px;
+    }
+    .informationMiddle h1{
+        font-size: 37px;
+    }
+    .informationRight h1{
+        font-size: 37px;
+    }
+    .informationLeft::before{
+        font-size: 12.5px;
+        height: 78%;
+    }
+    .informationMiddle::before{
+        font-size: 12.5px;
+        height: 78%;
+    }
+    .informationRight::before{
+        font-size: 12.5px;
+        height: 78%;
+    }
+    .informationLeft::after{
+        height: 77.5%;
+    }
+    .informationMiddle::after{
+        height: 77.5%;
+    }
+    .informationRight::after{
+        height: 77.5%;
+    }
+    .informationLeft.hovered h1{
+        margin-top: -5.5em;
+    }
+    .informationMiddle.hovered h1{
+        margin-top: -5.5em;
+    }
+    .informationRight.hovered h1{
+        margin-top: -5.5em;
+    }
+}
+
+@media(max-width:600px){
+    .information{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 40px;
+        margin-left: -4vw;
+    }
+    .informationLeft h1{
+        font-size: 40px;
+    }
+    .informationMiddle h1{
+        font-size: 40px;
+    }
+    .informationRight h1{
+        font-size: 40px;
+    }
+    .informationLeft{
+        width: 60%;
+        height: 70vw;
+    }
+    .informationMiddle{
+        width: 60%;
+        height: 70vw;
+    }
+    .informationRight{
+        width: 60%;
+        height: 70vw;
+    }
+    .informationLeft::before{
+        font-size: 16px;
+        height: 70vw;
+        width: 55%;
+    }
+    .informationMiddle::before{
+        font-size: 16px;
+        height: 70vw;
+        width: 55%;
+    }
+    .informationRight::before{
+        font-size: 16px;
+        height: 70vw;
+        width: 55%;
+    }
+    .informationLeft::after{
+        height: 70vw;
+        width: 60%;
+    }
+    .informationMiddle::after{
+        height: 70vw;
+        width: 60%;
+    }
+    .informationRight::after{
+        height: 70vw;
+        width: 60%;
+    }
+    .informationLeft.hovered h1{
+        margin-top: -5.5em;
+    }
+    .informationMiddle.hovered h1{
+        margin-top: -5.5em;
+    }
+    .informationRight.hovered h1{
+        margin-top: -5.5em;
+    }
+}
+

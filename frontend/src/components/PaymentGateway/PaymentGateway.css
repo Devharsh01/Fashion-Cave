@@ -1,0 +1,438 @@
+.payment-container {
+    width: 40vw;
+    height: 35vw;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    background-color: rgb(204, 206, 230);
+  }
+  
+  .payment-title {
+    text-transform: capitalize;
+    font-weight: 600;
+    align-self: start;
+  }
+  
+  .payment-label {
+    display: inline-flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+    z-index: 10;
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+    border: 1px solid transparent;
+    transition: all 0.5s;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .payment-label:hover {
+    background-color: #e2e8f0;
+  }
+  
+  .label-selected{
+    border-color: #6366f1;
+    color: #312e81;
+    background-color: #eef2ff;
+    font-weight: 700;
+  }
+  
+  .payment-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    position: relative;
+    z-index: 10;
+  }
+  
+  .payment-description {
+    font-weight: 600;
+    font-size: 28px;
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    white-space: nowrap;
+    transform: translateY(120%) translateX(120%);
+    top: 0.25rem;
+    left: 0.5em;
+    transition: all 0.7s;
+    opacity: 0;
+  }
+  
+  .label-selected .payment-description{
+    transform: translateY(15%) translateX(120%);
+    opacity: 1;
+  }
+
+  .payment-input {
+    color: #6366f1;
+  }
+  
+  .payment-input:focus {
+    outline: none;
+    box-shadow: none;
+  }
+  
+  /* Button CSS Starting */
+.payment-button-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+    margin-top: 25px;
+    margin-left: -70px;
+}
+
+/* Transaction Button properties */
+.container {
+  background-color: #ffffff;
+  display: flex;
+  width: 21vw;
+  height: 7vw;
+  position: relative;
+  border-radius: 6px;
+  border-radius: 20px;
+  transition: 0.4s ease-in-out;
+}
+
+.container:hover {
+  transform: scale(1.03);
+  width: 15vw;
+}
+
+.container:hover .left-side {
+  width: 100%;
+}
+
+.left-side {
+  background-color: #5de2a3;
+  width: 130px;
+  height: 7vw;
+  border-radius: 4px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: 0.4s;
+  flex-shrink: 0;
+  overflow: hidden;
+}
+
+.right-side {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  cursor: pointer;
+  justify-content: space-between;
+  white-space: nowrap;
+  transition: 0.4s;
+}
+
+.right-side:hover {
+  background-color: #f9f7f9;
+}
+
+.arrow {
+  width: 20px;
+  height: 20px;
+  margin-right: 20px;
+}
+
+.new {
+  font-size: 18px;
+  font-family: "Lexend Deca", sans-serif;
+  margin-left: 10px;
+}
+
+.card {
+  width: 50px;
+  height: 36px;
+  background-color: #c7ffbc;
+  border-radius: 6px;
+  position: absolute;
+  display: flex;
+  box-shadow: 9px 9px 9px -2px rgba(77, 200, 143, 0.72);
+  z-index: 10;
+  flex-direction: column;
+  align-items: center;
+  -webkit-box-shadow: 9px 9px 9px -2px rgba(77, 200, 143, 0.72);
+  -moz-box-shadow: 9px 9px 9px -2px rgba(77, 200, 143, 0.72);
+  -webkit-box-shadow: 9px 9px 9px -2px rgba(77, 200, 143, 0.72);
+}
+
+.card-line {
+  width: 50px;
+  height: 8px;
+  background-color: #80ea69;
+  border-radius: 2px;
+  margin-top: 7px;
+}
+
+@media only screen and (max-width: 480px) {
+  .container {
+    transform: scale(0.7);
+  }
+
+  .container:hover {
+    transform: scale(0.74);
+  }
+
+  .new {
+    font-size: 18px;
+  }
+}
+
+.buttons {
+  width: 6.5px;
+  height: 6.5px;
+  background-color: #379e1f;
+  box-shadow: 0 -10px 0 0 #26850e, 0 10px 0 0 #56be3e;
+  border-radius: 50%;
+  margin-top: 5px;
+  transform: rotate(90deg);
+  margin: 10px 0 0 -18px;
+}
+
+.container:hover .card {
+  animation: slide-top 1.2s cubic-bezier(0.645, 0.045, 0.355, 1) both;
+}
+
+.container:hover .post {
+  animation: slide-post 1s cubic-bezier(0.165, 0.84, 0.44, 1) both;
+}
+
+@keyframes slide-top {
+  0% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+
+  50% {
+    -webkit-transform: translateY(-70px) rotate(90deg);
+    transform: translateY(-70px) rotate(90deg);
+  }
+
+  60% {
+    -webkit-transform: translateY(-70px) rotate(90deg);
+    transform: translateY(-70px) rotate(90deg);
+  }
+
+  100% {
+    -webkit-transform: translateY(-8px) rotate(90deg);
+    transform: translateY(-8px) rotate(90deg);
+  }
+}
+
+.post {
+  width: 55px;
+  height: 68px;
+  background-color: #dddde0;
+  position: absolute;
+  z-index: 11;
+  bottom: 10px;
+  top: 105px;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.post-line {
+  width: 45px;
+  height: 7px;
+  background-color: #545354;
+  position: absolute;
+  border-radius: 0px 0px 3px 3px;
+  right: 5px;
+  top: 8px;
+}
+
+.post-line:before {
+  content: "";
+  position: absolute;
+  width: 45px;
+  height: 9px;
+  background-color: #757375;
+  top: -8px;
+}
+
+.screen {
+  width: 45px;
+  height: 23px;
+  background-color: #ffffff;
+  position: absolute;
+  top: 22px;
+  right: 5px;
+  border-radius: 3px;
+}
+
+.numbers {
+  width: 10px;
+  height: 10px;
+  background-color: #838183;
+  box-shadow: 0 -18px 0 0 #838183, 0 18px 0 0 #838183;
+  border-radius: 2px;
+  position: absolute;
+  transform: rotate(90deg);
+  left: 22px;
+  top: 49px;
+}
+
+.numbers-line2 {
+  width: 10px;
+  height: 10px;
+  background-color: #aaa9ab;
+  box-shadow: 0 -18px 0 0 #aaa9ab, 0 18px 0 0 #aaa9ab;
+  border-radius: 2px;
+  position: absolute;
+  transform: rotate(90deg);
+  left: 22px;
+  top: 62px;
+}
+
+@keyframes slide-post {
+  50% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+
+  100% {
+    -webkit-transform: translateY(-70px);
+    transform: translateY(-70px);
+  }
+}
+
+.dollar {
+  position: absolute;
+  font-size: 16px;
+  font-family: "Lexend Deca", sans-serif;
+  width: 100%;
+  left: 0;
+  top: 2px;
+  color: #4b953b;
+  text-align: center;
+}
+
+.container:hover .dollar {
+  animation: fade-in-fwd 0.4s 1s backwards;
+}
+
+@keyframes fade-in-fwd {
+  0% {
+    opacity: 0;
+    transform: translateY(-5px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Go back Button properties */
+.payment-back-button {
+  background-color: white;
+  text-align: center;
+  border: none;
+  width: 12rem; /* 48 * 0.25rem */
+  border-radius: 1rem; /* 2xl */
+  height: 7vw; /* 14 * 0.25rem */
+  position: relative;
+  color: black;
+  font-size: 1.25rem; /* xl */
+  font-weight: 500; /* font-semibold */
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.payment-inner-button {
+  background-color: #d36868; /* green-400 */
+  border-radius: 0.75rem; /* xl */
+  height: 93%; /* 12 * 0.25rem */
+  width: 25%; /* 1/4 */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  left: 0.25rem; /* 1 * 0.25rem */
+  top: 0.25rem; /* [4px] */
+  z-index: 10;
+  transition: width 0.5s;
+}
+
+.payment-back-button:hover .payment-inner-button {
+  width: 11.5rem; /* 184px */
+}
+
+.payment-button-text {
+  transform: translateX(0.5rem); /* translate-x-2 */
+}
+
+@media(max-width:1280px) {
+    .payment-container{
+      width: 50vw;
+      height: 42vw;
+    }
+    .container{
+      width: 27vw;
+      height: 8.5vw;
+    }
+    .left-side {
+      height: 8.5vw;
+    }
+    .payment-back-button{
+      height: 8.5vw;
+    }
+}
+
+@media (max-width: 1024px) {
+  .payment-container{
+    width: 55vw;
+    height: 45vw;
+  }
+}
+
+@media (max-width: 800px) {
+  .payment-container{
+    width: 80vw;
+    height: 60vw;
+  }
+  .container{
+    width: 35vw;
+    height: 12vw;
+  }
+  .left-side {
+    height: 12vw;
+  }
+  .payment-back-button{
+    height: 12vw;
+  }
+}
+
+@media (max-width: 600px) {
+  .payment-container{
+    height: 80vw;
+  }
+  .container{
+    width: 40vw;
+    height: 15vw;
+  }
+  .container:hover{
+    width: 30vw;
+  }
+  .left-side{
+    height: 15vw;
+  }
+  .payment-back-button{
+    height: 15vw;
+  }
+}

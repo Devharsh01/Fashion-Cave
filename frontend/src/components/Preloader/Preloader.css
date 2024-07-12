@@ -1,0 +1,27 @@
+.preloader{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.no-scroll{
+    overflow: hidden;
+    height: 100%;
+}
+
+.preloader-logo{
+    position: absolute;
+    z-index: 99;
+    margin-top: 100vh;
+    opacity: 0;
+}
+
+.preloader-screen{
+    position: absolute;
+    margin-top: 100vh;
+    width: 100vw;
+    height: 100vh;
+    z-index: 97;
+}
+
