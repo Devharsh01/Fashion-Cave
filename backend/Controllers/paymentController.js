@@ -1,5 +1,5 @@
 const Users = require("../Models/UserModel")
-const Orders = require("../Models/OrderModel")
+const Orders = require("../Models/orderModel.js")
 require('dotenv').config();
 const stripe = require("stripe")(process.env.stripe_info)
 

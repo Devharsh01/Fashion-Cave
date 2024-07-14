@@ -1,5 +1,5 @@
 const Users = require("../Models/UserModel")
-const Orders = require("../Models/OrderModel.js")
+const Orders = require("../Models/orderModel.js")
 
 exports.address = async (req, res) => {
     try {
