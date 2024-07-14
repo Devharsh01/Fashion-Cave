@@ -22,6 +22,17 @@
     }
 }
 
+@keyframes animateInMobile{
+    from{
+        margin-left: 100vw;
+        opacity: 0;
+    }
+    to{
+        margin-left: 0vw;
+        opacity: 1;
+    }
+}
+
 .cartitemsHalf{
     animation: animateIn 1s ease-in-out;
     width: 50vw;
@@ -426,6 +437,7 @@
         height: 20px;
     }
     .cartitemsHalf{
+        animation: animateIn 1s ease-in-out;
         width: 100vw;
         margin-left: 0;
     }

@@ -1,5 +1,4 @@
 import React, { createContext, useState, useEffect} from "react";
-import prod from "../components/Assets/all_product"
 export const ShopContext = createContext();
 let port = 4000;
 
@@ -20,13 +19,14 @@ const ShopContextProvider = (props) => {
     const [product, setProduct] = useState([]);
     const [promoCode, setPromoCode] = useState(0);
     const [orderData, setOrderData] = useState([])
+    let url = `http://localhost:${port}`
 
     //For the first rendering of products on the webpage
     useEffect(()=>{
-        fetch(`http://localhost:${port}/allproducts`).then((response)=>response.json())
+        fetch(`${url}/allproducts`).then((response)=>response.json())
         .then((data)=>{setAll_Product(data);setFilteredProducts(data)});
         
-        fetch(`http://localhost:${port}/allpromos`).then((response)=>response.json())
+        fetch(`${url}/allpromos`).then((response)=>response.json())
         .then((data)=>setAllPromos(data));
 
         //GET CART ITEMS FOR EACH USER
@@ -49,7 +49,7 @@ const ShopContextProvider = (props) => {
     const addToCart = (itemID) => {
         setCartItems((prev) => ({...prev, [itemID]:prev[itemID]+1}))
         if(localStorage.getItem('auth-token')){
-            fetch(`http://localhost:${port}/addtocart`,{
+            fetch(`${url}/addtocart`,{
                 method:"POST",
                 headers:{
                     Accept:"Application/form-data",
@@ -67,7 +67,7 @@ const ShopContextProvider = (props) => {
     const removeFromCart = (itemID) => {
         setCartItems((prev) => ({...prev, [itemID]:prev[itemID]-1}))
         if(localStorage.getItem('auth-token')){
-            fetch(`http://localhost:${port}/removefromcart`,{
+            fetch(`${url}/removefromcart`,{
                 method:"POST",
                 headers:{
                     Accept:"Application/form-data",
@@ -110,7 +110,7 @@ const ShopContextProvider = (props) => {
 
     const gettingCart = () => {
         if(localStorage.getItem('auth-token')){
-            fetch(`http://localhost:${port}/getcart`,{
+            fetch(`${url}/getcart`,{
                 method:'POST',
                 headers:{
                     Accept:'application/form-data',
@@ -124,13 +124,13 @@ const ShopContextProvider = (props) => {
     }
 
     const getProduct = (productId) => {
-        fetch(`http://localhost:${port}/product/${productId}`).then((response)=>response.json())
+        fetch(`${url}/product/${productId}`).then((response)=>response.json())
         .then((data)=>{setProduct(data)});
     }
 
     const fetchProductDetails = async (productId) => {
       try {
-        const response = await fetch(`http://localhost:${port}/product/${productId}`);
+        const response = await fetch(`${url}/product/${productId}`);
         if (!response.ok) {
           throw new Error('Network response was not ok');
         }
@@ -158,7 +158,7 @@ const ShopContextProvider = (props) => {
         return orderDataFinal
     }
 
-    const contextValue = {getTotalCartItems, all_product, cartItems, orderData,  addToCart, removeFromCart, getTotalCartAmount, allPromos, setRange, filteredProducts, setCheckedSizes, getProduct, product, gettingCart, promoCode, getOrderProducts, setPromoCode};
+    const contextValue = {getTotalCartItems, all_product, cartItems, orderData,  addToCart, removeFromCart, getTotalCartAmount, allPromos, setRange, filteredProducts, setCheckedSizes, getProduct, product, gettingCart, promoCode, getOrderProducts, setPromoCode, url};
     return(
         <ShopContext.Provider value={contextValue}>
             {props.children}

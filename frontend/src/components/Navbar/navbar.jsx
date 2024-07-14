@@ -113,7 +113,7 @@ const Navbar = ({setLogin, setShowCart}) => {
                     colors="primary:#CFCCCC"> 
                 </lord-icon> */}
                 {/*Displaying the login button*/}
-                {/* {localStorage.getItem('auth-token')? <div className='userDetails'><UserIcon/></div>: <></>} */}
+                {localStorage.getItem('auth-token')? <div className='userDetails'><UserIcon/></div>: <></>}
                 {localStorage.getItem('auth-token')?
                 <button onClick={()=>{localStorage.removeItem('auth-token'); window.location.replace('/')}}><h5>Logout</h5><div className="black"></div></button>:
                 <Link id='loginButton' onClick={()=>{setMenu("nothing"); setLogin(true)}} ><button><h5>Login</h5><div className="black"></div></button></Link>}

@@ -1,8 +1,9 @@
 const Users = require("../Models/UserModel")
 const jwt = require("jsonwebtoken")
+require('dotenv').config();
 
 const signToken = (id,email) => {
-    return jwt.sign({id: id, email: email}, "ase240f-ds23/ds31-de-34t42-4vcb", {
+    return jwt.sign({id: id, email: email}, process.env.jwt_token, {
         expiresIn: 300000000
     })
 }

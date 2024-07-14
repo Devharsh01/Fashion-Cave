@@ -8,7 +8,7 @@ import OrderReceipt from '../components/OrderReceipt/OrderReceipt';
 
 const Checkout = () => {
     const [current, setCurrent] = useState('address')
-    const {getOrderProducts, getTotalCartItems, getTotalCartAmount, orderData} = useContext(ShopContext)
+    const {getOrderProducts, getTotalCartItems, getTotalCartAmount, orderData, url} = useContext(ShopContext)
     const [searchParams, setSearchParams] = useSearchParams();
     const success = searchParams.get("success");
     const order = searchParams.get("order")
@@ -16,7 +16,7 @@ const Checkout = () => {
     useEffect(()=>{
         if(success != null && order != null)
                 setCurrent('orderVerify')
-    },[])
+    },[]) 
     
     useEffect(()=>{
         if(current == "paymentCard") {
@@ -24,7 +24,7 @@ const Checkout = () => {
                 const orders = await getOrderProducts();
                 console.log("Orderdata",orderData);
                 let resp;
-                await fetch(`http://localhost:4000/paymentCard`,{
+                await fetch(`${url}/paymentCard`,{
                     method:"POST",
                     headers:{
                         Accept:"Application/form-data",
@@ -47,7 +47,7 @@ const Checkout = () => {
                 const orders = await getOrderProducts();
                 console.log("Orderdata",orderData);
                 let resp;
-                await fetch(`http://localhost:4000/paymentCOD`,{
+                await fetch(`${url}/paymentCOD`,{
                     method:"POST",
                     headers:{
                         Accept:"Application/form-data",
@@ -59,9 +59,10 @@ const Checkout = () => {
                 .then((response)=>response.json()).then((data)=>resp = data)
                 console.log("Cash",resp)
                 if(resp.success) {
-                    window.location.replace(`http://localhost:3000/checkout?success=true&order=${resp.orderId}`)
+                    window.location.replace(`${window.location.origin}/checkout?success=true&order=${resp.orderId}`)
                 }
             }
+            console.log("FETCHING COD")
             fetchOrderCOD();
         }
         else if(current == "orderVerify") {
@@ -73,7 +74,7 @@ const Checkout = () => {
         else if(current == "orderSuccess" || current == "orderFailed") {
             async function fetchOrder() {
                 let response;
-                await fetch(`http://localhost:4000/${current}`,{
+                await fetch(`${url}/${current}`,{
                     method:"POST",
                     headers:{
                         Accept:"Application/form-data",
@@ -84,7 +85,7 @@ const Checkout = () => {
                 })
                 .then((response)=>response.json()).then((data)=> response=data)
                 setTimeout(() => {
-                    window.location.replace(`http://localhost:3000/`)
+                    window.location.replace(`${window.location.origin}`)
                 }, 5000);
             }
             fetchOrder();

@@ -188,7 +188,7 @@
 
 @media(max-width:800px){
     .offers{
-        margin-bottom: 60px;
+        margin-bottom: 200px;
     }
     .offers-image{
         transform: translateX(40%);
@@ -233,13 +233,16 @@
 
 @media(max-width:600px){
     .offers{
-        margin-bottom: 400px;
+        margin-top: 200px;
+        margin-bottom: 300px;
+        display: flex;   
+        align-items: center;
     }
     .offers-image{
-        transform: translateX(12%);
+        transform: translateX(0vw);
     }
     .scroll-reveal-horizontal{
-        transform: translateX(12%);
+        transform: translateX(0vw);
     }
     .giftbox{
         padding-top: 40px;
@@ -261,7 +264,7 @@
         transform: translateY(35%);
     }
     .offers-left{
-        margin-left: -44vw;
+        margin-left: -54vw;
         margin-top: 10vw;
         width: 180px;
     }

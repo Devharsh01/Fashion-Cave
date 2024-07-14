@@ -145,6 +145,11 @@ lord-icon{
     transition: all 0.5 ease;
 }
 
+.userDetails{
+    width: 40px;
+    cursor: pointer;
+}
+
 @keyframes rotateTwice{
     from{
         transform: rotateY(0deg);
@@ -264,12 +269,15 @@ lord-icon{
     .nav-cart-count{
         width: 18px;
         height: 18px;
-        margin-left: -32px;
+        margin-left: -42px;
         margin-top: -20px;  
     }
     .navbar.scrolled .nav-cart-count{
         margin-left: -34px;
         margin-top: -22px;
+    }
+    .userDetails{
+        width: 30px;
     }
 }
 
@@ -331,8 +339,12 @@ lord-icon{
         pointer-events: auto;
         transform: translateY(0px);
     }
+    .userDetails{
+        width: 40px;
+        padding-top: 8px;
+    }
     .nav-cart-count{
-        margin-left: -20px;
+        margin-left: -28px;
     }
     .navbar.scrolled .nav-cart-count{
         margin-left: -22px;
@@ -350,7 +362,9 @@ lord-icon{
     }
     .nav-logo{
         margin-left: -35px;
+        margin-right: -30px;
         transform: scale(0.70);
+        width: 250px;
     }
     .nav-menu{
         margin-left: 0px;
@@ -378,7 +392,7 @@ lord-icon{
         height: 40%;
     }
     .nav-cart-count{
-        margin-left: -30px;
+        margin-left: -37px;
         margin-top: -20px;
         width: 16px;
         height: 16px;

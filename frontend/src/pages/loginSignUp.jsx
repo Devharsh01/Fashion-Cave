@@ -10,7 +10,7 @@ import { ShopContext } from '../context/ShopContext';
 const LoginSignUp = ({setLogin}) => {
     gsap.registerPlugin(TextPlugin);
     
-    const {gettingCart} = useContext(ShopContext)
+    const {gettingCart, url} = useContext(ShopContext)
     const [key, setKey] = useState(0);
     const [state,setState] = useState("Login");                     //Check if login or sign-up
     const [inputState, setInputState] = useState("email")           //Check input element 
@@ -93,7 +93,7 @@ const LoginSignUp = ({setLogin}) => {
     const login = async () => {
         console.log("Login function executed",formData)
         let responseData;
-        await fetch('http://localhost:4000/login',{
+        await fetch(`${url}/login`,{
             method:'POST',
             headers:{
                 Accept:'application/form-data',
@@ -119,7 +119,7 @@ const LoginSignUp = ({setLogin}) => {
         console.log("SignUP function executed",formData)
         setInputState("email")
         let responseData;
-        await fetch('http://localhost:4000/signup',{
+        await fetch(`${url}/signup`,{
             method:'POST',
             headers:{
                 Accept:'application/form-data',
@@ -141,7 +141,7 @@ const LoginSignUp = ({setLogin}) => {
     const forgot = async () => {
         console.log("Forgot Function Called",formData['email']);
         let responseData;
-        await fetch('http://localhost:4000/forgotPassword',{
+        await fetch(`${url}/forgotPassword`,{
             method:'POST',
             headers:{
                 Accept:'application/form-data',

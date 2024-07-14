@@ -151,7 +151,13 @@
 @media(max-width:500px){
     .hero{
         flex-direction: column;
+        justify-content: center;
+        align-items: center;
         padding-top: 11vw;
+    }
+    .hero-left{
+        padding-left: 0;
+        padding: 0px 20px;
     }
     .hero-right{
         display: none;

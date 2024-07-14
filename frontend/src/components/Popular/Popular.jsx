@@ -1,28 +1,25 @@
-import React, { useEffect, useRef } from 'react'
+import React, { useContext, useEffect, useRef } from 'react'
 import './Popular.css'
 import Item from '../Items/Item.jsx'
 import arrow_left from '../Assets/arrow_right2.png'
 import arrow_right from '../Assets/arrow_right2.png'
-import p1_img from "../Assets/product_1.png";
-import p2_img from "../Assets/product_2.png";
-import p3_img from "../Assets/product_3.png";
-import p4_img from "../Assets/product_4.png";
-import p5_img from "../Assets/product_5.png";
-import p6_img from "../Assets/product_6.png";
-import p7_img from "../Assets/product_7.png";
-import p8_img from "../Assets/product_8.png";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import bg_image from '../Assets/background_landscape.jpg'
 import { useState } from 'react';
+import { ShopContext } from '../../context/ShopContext';
 
 const Popular = () => {
-  // const [popularProducts, setPopularProducts] = useState([]);
+    const [popularProducts, setPopularProducts] = useState([]);
+    const {all_product} = useContext(ShopContext)
 
-    // useEffect(()=>{
-      //     fetch('http://localhost:4000/popularinwomen')
-    //     .then((response)=>response.json()).then((data)=>setPopularProducts(data));
-    // }, [])
+    useEffect(()=>{
+      let popularFilter = [...all_product];
+      popularFilter = popularFilter.sort((a,b)=> new Date(b.date) - new Date(a.date) )
+      let shownPopularProducts = popularFilter.slice(0,4);
+      console.log(popularFilter, shownPopularProducts, shownPopularProducts.length)
+      setPopularProducts(shownPopularProducts)
+    }, [])
 
     const popularRef = useRef(null);
     gsap.registerPlugin(ScrollTrigger);
@@ -35,38 +32,6 @@ const Popular = () => {
       })
     })
 
-    const popularProducts = [{
-          id: 1,
-          name: "Striped Flutter Sleeve Overlap Collar Peplum Hem Blouse",
-          category: "sarees",
-          image: p1_img,
-          new_price: 50.0,
-          old_price: 80.5,
-        },
-        {
-          id: 2,
-          name: "Striped Flutter Sleeve Overlap Collar Peplum Hem Blouse",
-          category: "sarees",
-          image: p2_img,
-          new_price: 85.0,
-          old_price: 120.5,
-        },
-        {
-          id: 3,
-          name: "Striped Flutter Sleeve Overlap Collar Peplum Hem Blouse",
-          category: "sarees",
-          image: p3_img,
-          new_price: 60.0,
-          old_price: 100.5,
-        },
-        {
-          id: 4,
-          name: "Striped Flutter Sleeve Overlap Collar Peplum Hem Blouse",
-          category: "sarees",
-          image: p4_img,
-          new_price: 100.0,
-          old_price: 150.0,
-        }]
     let rightCount = 0;     //Measure the number of right counts
     let maxRightCount = (popularProducts.length-4)/2
 
@@ -94,6 +59,6 @@ const Popular = () => {
             </div> */}
         </div>
     )
-}
+  }
 
 export default Popular

@@ -25,4 +25,4 @@ const Promo = mongoose.model("Promo",{
     }
 })
 
-export default Promo;
+module.exports = Promo;

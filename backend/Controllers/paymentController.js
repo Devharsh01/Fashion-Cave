@@ -1,6 +1,7 @@
 const Users = require("../Models/UserModel")
 const Orders = require("../Models/OrderModel")
-const stripe = require("stripe")("sk_test_51PYU0E2KealGAmklRofLS4AVyT5ZjcLNeseqdPexbRMHPSaVCY5QF1GV6DlkMUF3Oy38Kwjz859DvAE7mVAa84tW00kUpHqnbw")
+require('dotenv').config();
+const stripe = require("stripe")(process.env.stripe_info)
 
 exports.payCard = async (req, res) => {
     try {
@@ -33,11 +34,12 @@ exports.payCard = async (req, res) => {
             },
             quantity: item.quantity
         }))
+        const baseUrl = `${req.protocol}://${req.get('host')}`;
         const session = await stripe.checkout.sessions.create({
             line_items: line_item,
             mode: "payment",
-            success_url:`http://localhost:3000/checkout?success=true&order=${id1}`,
-            cancel_url:`http://localhost:3000/checkout?success=false&order=${id1}`
+            success_url:`${baseUrl}/checkout?success=true&order=${id1}`,
+            cancel_url:`${baseUrl}/checkout?success=false&order=${id1}`
         })
         console.log("Successful, Send Response", session.url)
         res.json({success:true, session_url: session.url})

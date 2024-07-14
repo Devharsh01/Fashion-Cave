@@ -37,7 +37,6 @@ exports.add = async (req,res)=>{
     userData.cart[req.body.itemId] += 1;
     try {   
         await Users.findOneAndUpdate({id:req.user.id},{cart:userData.cart}, { new: true, useFindAndModify: false });
-        console.log("Added", req.user.id, req.body.itemId, userData.cart)
         res.status(200).json({
             success: true,
             message: "Added"

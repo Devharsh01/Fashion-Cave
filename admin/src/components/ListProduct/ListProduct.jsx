@@ -1,24 +1,32 @@
 import React, { useEffect, useState } from "react";
 import './ListProduct.css'
 import cross_icon from '../../assets/cross_icon.png'
+import { useContext } from "react";
+import { AdminContext} from "../../Context/adminContext";
 
 const ListProduct = () =>{
 
+    const {url} = useContext(AdminContext)
     const [allproducts, setAllProducts] = useState([]);
+
     const fetchInfo = async () =>{
-        await fetch('http://localhost:4000/allproducts',{
-            method:"POST",
-        })
+        await fetch(`${url}/allproducts`)
         .then((res)=>res.json())
         .then((data)=>{setAllProducts(data)});
+        console.log("Info Fetched")
     }
+
+    useEffect(()=>{
+        console.log("All products", allproducts, allproducts.length)
+    },[allproducts])
 
     useEffect(() => {
         fetchInfo();
+        console.log("Fetching Info")
     },[])
 
     const remove_product = async (id) =>{
-        await fetch('http://localhost:4000/removeproduct',{
+        await fetch(`${url}/removeproduct`,{
             method:"POST",
             headers:{
                 Accept:'application/json',

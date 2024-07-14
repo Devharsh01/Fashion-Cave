@@ -8,7 +8,7 @@ exports.fetchUser = async (req,res,next) =>{
     }
     else{
         try{
-            const data = jwt.verify(token,'ase240f-ds23/ds31-de-34t42-4vcb');
+            const data = jwt.verify(token, process.env.jwt_token );
             req.user = data.user;
             next();
         }catch(error){

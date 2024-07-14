@@ -1,5 +1,5 @@
 const Users = require("../Models/UserModel")
-const Orders = require("../Models/OrderModel")
+const Orders = require("../Models/OrderModel.js")
 
 exports.address = async (req, res) => {
     try {
@@ -29,6 +29,11 @@ exports.statusSuccess = async (req, res) => {
         const user = await Users.findOneAndUpdate({id: req.user.id}, {cart: cart}, { new: true })
         if (!user) {
             return res.status(404).json({ success: false, errors: 'User not found' });
+        }
+        let newOrder = await Orders.findOne({orderId: req.body.orderId})
+        let newUser = await Users.findOneAndUpdate({id: req.user.id}, {$push: {orderedItems: newOrder}}, {new: true})
+        if(!newUser){
+            return res.status(404).json({success: false, errors: "User Order List Not Updated"})
         }
         res.status(200).json({ success: true, message: 'Payment Done successfully' });
     } catch (error) {

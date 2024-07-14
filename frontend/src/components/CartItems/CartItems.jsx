@@ -1,6 +1,7 @@
 import React, { useContext, useEffect, useState } from "react";
 import './CartItems.css'
 import { Link } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom';
 import { ShopContext } from "../../context/ShopContext";
 import AddIcon from "../Assets/AddIcon";
 import SubstractIcon from "../Assets/SubstractIcon";
@@ -13,12 +14,20 @@ const CartItems = ({showCart, setShowCart}) => {
     const [substractHover, setSubstractHover] = useState(false)     //For Specific id Button Color Change
     const [inputValue, setInputValue] = useState('');
     const [isSliding, setIsSliding] = useState(false);
-    
-    const totalAmount = () => {
+    const [redirect, setRedirect] = useState(false);
+    const navigate = useNavigate();
+
+    function totalAmount () {
         let total = getTotalCartAmount();
-        total -= ((totalAmount*promoCode)/100);
-        return total;
+        const discount = total*(100/(100-promoCode));
+        return discount;
     }
+
+    useEffect(()=>{
+        if(redirect){
+            navigate("/checkout");
+        }
+    },[redirect])
 
     const handleChange = (event) => {
         setInputValue(event.target.value);
@@ -26,7 +35,10 @@ const CartItems = ({showCart, setShowCart}) => {
 
     const checkoutButtonClicked = () => {
         if(getTotalCartAmount() > 0) {
-            window.location.replace(`http://localhost:3000/checkout`)
+            setRedirect(true)
+        }
+        else {
+            alert("Insert atleast one item")
         }
     }
 
@@ -85,7 +97,7 @@ const CartItems = ({showCart, setShowCart}) => {
                     <div className={`${showCart ? "cartitems-detailsHalf": "cartitems-details"}`}>
                         <div className={`${showCart ? "cartitems-total-itemHalf":"cartitems-total-item"}`}>
                             <p>Subtotal</p>
-                            <p>${getTotalCartAmount()}</p>
+                            <p>₹{promoCode ? totalAmount(): getTotalCartAmount()}</p>
                         </div>
                         <hr />
                         <div className={`${showCart ? "cartitems-total-itemHalf":"cartitems-total-item"}`}>
@@ -95,7 +107,7 @@ const CartItems = ({showCart, setShowCart}) => {
                         <hr />
                         <div className={`${showCart ? "cartitems-total-itemHalf":"cartitems-total-item"}`}>
                             <h3>Total</h3>
-                            <h3>${getTotalCartAmount()}</h3>
+                            <h3>₹{promoCode ? totalAmount(): getTotalCartAmount()}</h3>
                         </div>
                         {promoCode !== 0 ?
                         <div>
@@ -107,7 +119,7 @@ const CartItems = ({showCart, setShowCart}) => {
                             <hr/>
                             <div className={`${showCart ? "cartitems-total-itemHalf":"cartitems-total-item"}`}>
                                 <h3>Final Amount</h3>
-                                <h3>${getTotalCartAmount()}</h3>
+                                <h3>₹{getTotalCartAmount()}</h3>
                             </div>
                         </div>
                         :<></>}

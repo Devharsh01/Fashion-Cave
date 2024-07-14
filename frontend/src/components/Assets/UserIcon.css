@@ -14,3 +14,9 @@
     height: 3.5rem; /* Tailwind's h-16 */
   }
   
+@media (max-width: 1024px) {
+  .icon{
+    width: 3.0rem;
+    height: 3.0rem;
+  }
+}
