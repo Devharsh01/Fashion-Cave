@@ -19,7 +19,7 @@ const ShopContextProvider = (props) => {
     const [product, setProduct] = useState([]);
     const [promoCode, setPromoCode] = useState(0);
     const [orderData, setOrderData] = useState([])
-    let url = `http://localhost:${port}`
+    let url = `https://fashion-cave-backend.onrender.com`
 
     //For the first rendering of products on the webpage
     useEffect(()=>{
