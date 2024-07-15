@@ -21,7 +21,7 @@ const userController = require('./Controllers/userController')
 app.use(express.json());
 
 // Database Connection with MongoDB
-mongoose.connect(`mongodb+srv://${process.env.mongoDBUser}:${process.env.mongoDBPass}@fashioncave.d1rhbrw.mongodb.net/`)
+mongoose.connect(`mongodb+srv://${process.env.mongoDBUser}:${process.env.mongoDBPass}@fashioncave.d1rhbrw.mongodb.net/FashionCave`).then(()=>console.log("DB Connected"))
 
 const storage = multer.diskStorage({
     destination: './upload/images',
