@@ -21,7 +21,7 @@ app.use(express.json());
 app.use(cors());
 
 // Database Connection with MongoDB
-mongoose.connect("mongodb://localhost:27017/FashionCave")
+mongoose.connect("mongodb+srv://fashionCave:websiteforwork@fashioncave.d1rhbrw.mongodb.net/?retryWrites=true&w=majority&appName=FashionCave")
 
 const storage = multer.diskStorage({
     destination: './upload/images',
