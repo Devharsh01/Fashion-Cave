@@ -19,7 +19,6 @@ const promoController = require('./Controllers/promoController')
 const userController = require('./Controllers/userController')
 
 app.use(express.json());
-app.use(cors());
 
 // Database Connection with MongoDB
 mongoose.connect(`mongodb+srv://${process.env.mongoDBUser}:${process.env.mongoDBPass}@fashioncave.d1rhbrw.mongodb.net/`)
