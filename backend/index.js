@@ -7,6 +7,7 @@ const multer = require("multer");
 const path = require("path");
 const cors = require("cors");
 const { log, error } = require("console");
+require('dotenv').config();
 
 const authController = require('./Controllers/authController')
 const passController = require('./Controllers/passController')
@@ -21,7 +22,7 @@ app.use(express.json());
 app.use(cors());
 
 // Database Connection with MongoDB
-mongoose.connect("mongodb+srv://fashionCave:websiteforwork@fashioncave.d1rhbrw.mongodb.net/?retryWrites=true&w=majority&appName=FashionCave")
+mongoose.connect(`mongodb+srv://${process.env.mongoDBUser}:${process.env.mongoDBPass}@fashioncave.d1rhbrw.mongodb.net/?retryWrites=true&w=majority&appName=FashionCave`)
 
 const storage = multer.diskStorage({
     destination: './upload/images',
