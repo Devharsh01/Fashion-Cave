@@ -19,6 +19,11 @@ const promoController = require('./Controllers/promoController')
 const userController = require('./Controllers/userController')
 
 app.use(express.json());
+app.use(cors({
+    origin: '*', // Default: allow all origins
+    methods: 'GET,HEAD,PUT,PATCH,POST,DELETE', // Default: allow these HTTP methods
+    allowedHeaders: '*', // Default: allow all requested headers
+  }));
 
 // Database Connection with MongoDB
 mongoose.connect(`mongodb+srv://${process.env.mongoDBUser}:${process.env.mongoDBPass}@fashioncave.d1rhbrw.mongodb.net/FashionCave`).then(()=>console.log("DB Connected"))
