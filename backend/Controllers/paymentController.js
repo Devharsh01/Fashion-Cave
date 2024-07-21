@@ -4,7 +4,7 @@ require('dotenv').config();
 const stripe = require("stripe")(process.env.stripe_info)
 
 exports.payCard = async (req, res) => {
-    try {
+    try { 
         let orders = await Orders.find({});
         let id1;
         if(orders.length>0){
@@ -14,16 +14,18 @@ exports.payCard = async (req, res) => {
         }
         else
             id1 = 1;
-        const newOrder = new Orders({
-            orderId: id1,
-            userId: req.user.id,
-            quantity: req.body.quantity,
-            amount: req.body.amount,
-            items: req.body.items,
-            paymentMethod: "Payment Card"
-        })
-        await newOrder.save();
-        console.log(req.body.items)
+        let newOrder;
+        for (const item of req.body.items) { 
+            newOrder = new Orders({
+                orderId: id1,
+                userId: req.user.id,
+                quantity: item.quantity,
+                amount: item.new_price*item.quantity,
+                items: item,
+                paymentMethod: "Payment Card"
+            })
+            await newOrder.save();
+        }
         const line_item = req.body.items.map((item)=>({
             price_data: {
                 currency: "inr",
@@ -60,15 +62,18 @@ exports.payCOD = async (req, res) => {
         }
         else
             id1 = 1;
-        const newOrder = new Orders({
-            orderId: id1,
-            userId: req.user.id,
-            quantity: req.body.quantity,
-            amount: req.body.amount,
-            items: req.body.items,
-            paymentMethod: "Payment->Cash On Delivery"
-        })
-        await newOrder.save();
+        let newOrder;
+        for (const item of req.body.items) { 
+            newOrder = new Orders({
+                orderId: id1,
+                userId: req.user.id,
+                quantity: item.quantity,
+                amount: item.new_price*item.quantity,
+                items: item,
+                paymentMethod: "Payment->Cash On Delivery"
+            })
+            await newOrder.save();
+        }
         console.log("Successful done", id1)
         res.json({success:true, orderId: id1 })
     }catch(err) {

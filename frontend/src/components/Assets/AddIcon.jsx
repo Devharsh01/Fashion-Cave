@@ -1,15 +1,20 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 const AddIcon = ({color}) => {
+
+  const [isColor, setIsColor] = useState(color);
+
   return (
     <svg
-      fill={color}
+      onMouseLeave={()=>{setIsColor(color)}}
+      onMouseEnter={()=>{setIsColor("#00ff15")}}
+      fill={isColor}
       version="1.1"
       id="Capa_1"
       xmlns="http://www.w3.org/2000/svg"
       xmlnsXlink="http://www.w3.org/1999/xlink"
-      width="20px"
-      height="20px"
+      width="100%"
+      height="100%"
       viewBox="0 0 45.402 45.402"
       xmlSpace="preserve"
     >

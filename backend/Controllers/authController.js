@@ -17,9 +17,6 @@ exports.signup = async (req,res,next) => {
         })
     }
     let cart = {};                              //Cart for each user
-    for(let i = 0;i<300;i++){
-        cart[i] = 0;
-    }
     try {
         let users = await Users.find({});
         let id;

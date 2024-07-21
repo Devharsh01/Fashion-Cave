@@ -1,15 +1,20 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 const SubstractIcon = ({color}) => {
+
+  const [isColor, setIsColor] = useState(color)
+
   return (
     <svg
-      fill={color}
+      onMouseEnter={()=>{setIsColor("red")}}
+      onMouseLeave={()=>{setIsColor(color)}}
+      fill={isColor}
       version="1.1"
       id="Capa_1"
       xmlns="http://www.w3.org/2000/svg"
       xmlnsXlink="http://www.w3.org/1999/xlink"
-      width="25px"
-      height="25px"
+      width="100%"
+      height="100%"
       viewBox="0 0 45.402 45.402"
       xmlSpace="preserve"
     >

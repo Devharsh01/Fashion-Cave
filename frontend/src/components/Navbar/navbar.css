@@ -269,8 +269,14 @@ lord-icon{
     .nav-cart-count{
         width: 18px;
         height: 18px;
-        margin-left: -42px;
+        margin-left: -30px;
         margin-top: -20px;  
+    }
+    .cartLogin{
+        gap: 20px;
+    }
+    .no-auth-count{
+        margin-left: -35px;   
     }
     .navbar.scrolled .nav-cart-count{
         margin-left: -34px;
@@ -346,8 +352,11 @@ lord-icon{
     .nav-cart-count{
         margin-left: -28px;
     }
+    .no-auth-count{
+        margin-left: -22px;   
+    }
     .navbar.scrolled .nav-cart-count{
-        margin-left: -22px;
+        margin-left: -30px;
     }
     .nav-login-cart {
         gap: 20px;
@@ -359,6 +368,7 @@ lord-icon{
         padding: 8px 0px;
         width: 100vw;
         gap: 0;
+        z-index: 5;
     }
     .nav-logo{
         margin-left: -35px;
@@ -368,6 +378,10 @@ lord-icon{
     }
     .nav-menu{
         margin-left: 0px;
+    }
+    .navbar.scrolled {
+        width: 280px;
+        margin-left: 18vw;
     }
     .navbar.scrolled .nav-menu{
         margin-top: -10px;
@@ -397,8 +411,11 @@ lord-icon{
         width: 16px;
         height: 16px;
     }
+    .no-auth-count{
+        margin-left: -30px;   
+    }
     .navbar.scrolled .nav-cart-count{
-        margin-left: -28px;
+        margin-left: -40px;
         width: 18px;
         height: 18px;
     }

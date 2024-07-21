@@ -1,7 +1,9 @@
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import './Address.css'
+import { ShopContext } from '../../context/ShopContext';
 
 const Address = ({changeCurrent}) => {
+    const {getUserInfo} = useContext(ShopContext)
     const [addressFormData, setAddressFormData] = useState({                      //Input values storage
         first_name:"",
         middle_name:"",
@@ -16,6 +18,11 @@ const Address = ({changeCurrent}) => {
     })
     const [err, setErr] = useState({});                     //Identify the Fields that are empty and change color
     const [successfulClick, setSuccessfulClick] = useState(false);
+    const [userAdd, setUserAdd] = useState({})
+
+    const fetchUserAdd = async () => {
+        setUserAdd(await getUserInfo())
+    }
 
     useEffect(()=>{
         if(successfulClick) {
@@ -34,6 +41,28 @@ const Address = ({changeCurrent}) => {
             changeCurrent('payment')
         }
     },[successfulClick])
+
+    useEffect(()=>{
+        fetchUserAdd();
+    },[])
+
+    useEffect(()=>{
+        if(Object.keys(userAdd).length >0 && Object.keys(userAdd.address).length > 0) {
+            setAddressFormData((prevData) => ({
+                ...prevData,
+                first_name: userAdd.address.first_name,
+                middle_name: userAdd.address.middle_name,
+                last_name: userAdd.address.last_name,
+                location: userAdd.address.location,
+                street: userAdd.address.street,
+                locality: userAdd.address.locality,
+                city: userAdd.address.city,
+                state: userAdd.address.state,
+                pincode: userAdd.address.pincode,
+                mobile_no: userAdd.address.mobile_no
+            }))
+        }
+    },[userAdd])
 
     const handleChange = (e) => {                           //Update the value of input
         if(e.target.name == "mobile_no") {

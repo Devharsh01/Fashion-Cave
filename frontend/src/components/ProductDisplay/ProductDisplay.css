@@ -261,7 +261,7 @@
 @media(max-width:600px){
     .productdisplay{
         flex-direction: column;
-        padding-top: 18vw;
+        padding-top: 24vw;
     }
     .productdisplay-left{
         gap: 10px;

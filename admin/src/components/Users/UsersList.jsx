@@ -14,11 +14,6 @@ const Users = () =>{
         .then((data)=>{setAllUsers(data)});
         console.log("Info Fetched")
     }
-
-    useEffect(()=>{
-        console.log("All users", allusers, allusers.length)
-    },[allusers])
-
     useEffect(() => {
         fetchInfo();
     },[])
@@ -40,8 +35,6 @@ const Users = () =>{
                         { Object.keys(user.address).length > 0 ?<div className="listusers_content"><p>                </p></div> : <></>}
                         { Object.keys(user.address).length > 0 ?<div className="listusers_content"><p>                </p></div> : <></>}
                         <div className="listusers_content"><p>Orders: </p></div>
-                        {/* 
-                        <div className="listusers_content"><p>Cart: </p>{user.cart}</div> */}
                     </div>
                     <div key = {index} className="listusers-details">
                         {console.log(user)}
@@ -62,8 +55,6 @@ const Users = () =>{
                                 </div>
                             )}) 
                             : "Not Available"}</div>
-                        {/* 
-                        <div className="listusers_content"><p>Cart: </p>{user.cart}</div> */}
                     </div>
                     </div>
                     <hr/>

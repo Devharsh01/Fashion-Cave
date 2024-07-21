@@ -127,12 +127,12 @@
     }
 }
 
-@media(max-width:600px){
+@media(max-width:600px){ 
     .popular{
-        height: 130vw;
+        height: 720px;
     }
     .popular-bg{
-        height: 130vw;
+        height: 720px;
     }
     .popular-item{
         display: grid;

@@ -236,7 +236,7 @@
         margin-top: 200px;
         margin-bottom: 300px;
         display: flex;   
-        align-items: center;
+        align-items: center; 
     }
     .offers-image{
         transform: translateX(0vw);
@@ -264,7 +264,8 @@
         transform: translateY(35%);
     }
     .offers-left{
-        margin-left: -54vw;
+        height: 100px;
+        margin-left: -300px;
         margin-top: 10vw;
         width: 180px;
     }
@@ -283,5 +284,11 @@
         height: 25px;
         font-size: 10px;
         margin-top: 12px;
+    }
+}
+
+@media (max-width: 450px) {
+    .offers{
+        margin-left: -60px;
     }
 }

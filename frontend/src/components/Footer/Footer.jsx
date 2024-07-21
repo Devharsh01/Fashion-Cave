@@ -6,7 +6,7 @@ import GmailIcon from '../Assets/gmail'
 
 const Footer = () => {
     return ( 
-        <div className="footer">
+        <div className="footer" id='footer'>
             <div className="footer-details">
                 <div className="footer-left">
                     <h1>Crafted for Comfort,</h1>

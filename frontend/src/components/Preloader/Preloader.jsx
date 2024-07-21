@@ -1,4 +1,4 @@
-import React, { useLayoutEffect, useRef } from "react";
+import React, { useEffect, useRef } from "react";
 import './Preloader.css'
 import logo from '../Assets/logo_small1.jpg'
 import black_screen from '../Assets/black_screen.jpg'
@@ -6,7 +6,7 @@ import gsap from 'gsap';
 
 const Preloader = () => {
     const preloaderRef = useRef(null);
-    useLayoutEffect(() => {
+    useEffect(() => {
         let originalLogo = document.getElementById('nav-logo-id')
         let goingLogo = document.getElementById('logo')
         let ctx = gsap.context(() => {

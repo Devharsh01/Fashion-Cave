@@ -8,10 +8,11 @@ import SubstractIcon from "../Assets/SubstractIcon";
 import cross_icon from '../Assets/cart_cross_icon.png'
 
 const CartItems = ({showCart, setShowCart}) => {
-    const {all_product, cartItems, addToCart, removeFromCart, getTotalCartAmount, allPromos,setPromoCode, promoCode} = useContext(ShopContext);
+    const {all_product, cartItems, sizeSelected, addToCart, removeFromCart, getTotalCartAmount, allPromos,setPromoCode, promoCode} = useContext(ShopContext);
     const [addHover, setAddHover] = useState(false)             //For Add Button Color Change
-    const [idHover, setIdHover] = useState(0)                   //For Substract Button Color Change
-    const [substractHover, setSubstractHover] = useState(false)     //For Specific id Button Color Change
+    const [substractHover, setSubstractHover] = useState(false)     //For Substract Button Color Change
+    const [idHover, setIdHover] = useState(0)                   //For Specific id Button Color Change
+    const [sizeHover, setSizeHover] = useState('')                   //For Specific size Button Color Change
     const [inputValue, setInputValue] = useState('');
     const [isSliding, setIsSliding] = useState(false);
     const [redirect, setRedirect] = useState(false);
@@ -54,42 +55,47 @@ const CartItems = ({showCart, setShowCart}) => {
           }, 1000) : <></>} 
     },[isSliding])
 
-    let shown = 0;
     return(
         <div className={`cart ${showCart ? "relative-half":""}`}>
         <div className={`${showCart ? `cartitemsHalf ${isSliding ? 'slide-out':""}`:"cartitems"}`}>
             {showCart? <img src={cross_icon} alt="" className="cartitems-cross" onClick={()=>{setIsSliding(true)}}/> :<></>}
             <div className={`${showCart ? "cartitems-format-mainHalf":"cartitems-format-main"}`}>
                 <p>Products</p>
-                <p className={`${showCart ?"cartitems-titleHalf":""}`}>Title</p>
+                <p className={`${showCart ?"cartitems-titleHalf":"cartitems-title"}`}>Title</p>
                 <p className={`${showCart ?"cartitems-priceTitleHalf":""}`}>Price</p>
-                <p>Quantity</p>
+                <p>Quantity/Size</p>
                 <p>Total</p>
             </div> 
             <hr />
             <div className={`${showCart ? "cartitems-displayHalf":"cartitems-display"}`}>
-                {all_product.map((e)=>{
-                    if(cartItems[e.id]>0)
-                    {
-                        shown = 1;
-                        return <div>
+                {Object.keys(cartItems).length>0 ? Object.entries(cartItems).map(([ele,size])=>{
+                    let e = all_product.find((product)=>product.id===Number(ele))
+                    const sizeCount = cartItems[ele].reduce((acc, size) => {        //Calculate each item size
+                        acc[size] = (acc[size] || 0) + 1;
+                        return acc;
+                      }, {});                      
+                    if(e){
+                        return <div>    
                                 <div onMouseEnter={()=>{setIdHover(e.id)}} onMouseLeave={()=>{setIdHover(0)}} className={`${showCart ? "cartitems-formatHalf cartitems-format-mainHalf":"cartitems-format cartitems-format-main"}`}>
                                     <img src={e.image} alt="" className="cartitems-product-icon" />
-                                    <p className={`${showCart ?"cartitems-nameHalf":"cartitems-name"}`} >{e.name}</p>
+                                    <p className={`${showCart ?"cartitems-nameHalf":"cartitems-name"}`} >{`${e.name} (Size ${size}) `}</p>
                                     <p className={`${showCart ?"cartitems-priceHalf":"cartitems-price"}`}>${e.new_price}</p>
-                                    <div className={`${showCart?"cartitems-quantityHalf":"cartitems-quantity"}`}>
-                                        <div onMouseEnter={()=>{setAddHover(true)}} onMouseLeave={()=>{setAddHover(false)}} onClick={()=>{addToCart(e.id)}}><AddIcon color={`${idHover===e.id?addHover?"#00ff15":showCart?"#000":"#fff":showCart?"#000":"#fff"}`}></AddIcon></div>
-                                        {cartItems[e.id]}
-                                        <div onMouseEnter={()=>{setSubstractHover(true)}} onMouseLeave={()=>{setSubstractHover(false)}} onClick={()=>{removeFromCart(e.id)}}><SubstractIcon color={`${idHover===e.id?substractHover?"red":showCart?"#000":"#fff":showCart?"#000":"#fff"}`}></SubstractIcon></div>
+                                    <div className="cartitems-quantityAll">
+                                        {Object.entries(sizeCount).map(([size, count]) => (
+                                            <div className={`${showCart?"cartitems-quantityHalf":"cartitems-quantity"}`} onMouseEnter={()=>{setSizeHover(size)}} onMouseLeave={()=>{setSizeHover('')}}>
+                                                <div onMouseEnter={()=>{setAddHover(true)}} onMouseLeave={()=>{setAddHover(false)}} onClick={()=>{addToCart(e.id,size)}}><AddIcon color={`${showCart?"#000":"#fff"}`}></AddIcon></div>
+                                                {count} / {size}
+                                                <div onMouseEnter={()=>{setSubstractHover(true)}} onMouseLeave={()=>{setSubstractHover(false)}} onClick={()=>{removeFromCart(e.id,size)}}><SubstractIcon color={`${showCart?"#000":"#fff"}`}></SubstractIcon></div>
+                                            </div>
+                                        ))}
                                     </div>
-                                    <p className={`cartitems-totalPriceHalf`}>${e.new_price*cartItems[e.id]}</p>
+                                    <p className={`cartitems-totalPriceHalf`}>${e.new_price*cartItems[ele].length}</p>
                                 </div>
                                 <hr />
                             </div>
                     }
                     return null;
-                })}
-                { shown === 0? <p>Cart is Empty</p>:<></>}
+                }):<p>Cart is Empty</p>}
             </div>
             <div className={`${showCart ? "cartitems-downHalf":"cartitems-down"}`}>
                 <div className={`${showCart ? "cartitems-totalHalf":"cartitems-total"}`}>

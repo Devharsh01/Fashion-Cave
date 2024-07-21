@@ -182,12 +182,15 @@
 
 .shopcategory-filtermenu{
     height: 0; 
+    z-index: -99;
     opacity: 0;
+    pointer-events: none;
     transition: all 0.5s ease-out;
 }
 
 .shopcategory-filtermenu.visible{
     height: 340px;
+    pointer-events: all;
     opacity: 1;
     transition: all 0.5s ease-out;
 }
@@ -335,7 +338,7 @@
 
 @media(max-width:500px){
     .shop-category{
-        padding-top: 20vw;
+        padding-top: 23vw;
     }
     .shopcategory-products{
         grid-template-columns: 1fr 1fr;
@@ -356,7 +359,7 @@
         margin-left: -75px;
     }
     .shopcategory-filter-black{
-        margin-left: -2vw;
+        margin-left: -10px;
     }
     .shopcategory-black{
         margin-left: -2vw;

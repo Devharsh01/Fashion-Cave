@@ -340,52 +340,52 @@
         margin-left: -4vw;
     }
     .informationLeft h1{
-        font-size: 40px;
+        font-size: 36px;
     }
     .informationMiddle h1{
-        font-size: 40px;
+        font-size: 36px;
     }
     .informationRight h1{
-        font-size: 40px;
+        font-size: 36px;
     }
     .informationLeft{
-        width: 60%;
+        width: 56%;
         height: 70vw;
     }
     .informationMiddle{
-        width: 60%;
+        width: 56%;
         height: 70vw;
     }
     .informationRight{
-        width: 60%;
+        width: 56%;
         height: 70vw;
     }
     .informationLeft::before{
-        font-size: 16px;
+        font-size: 0.6em;
         height: 70vw;
-        width: 55%;
+        width: 50%;
     }
     .informationMiddle::before{
-        font-size: 16px;
+        font-size: 0.6em;
         height: 70vw;
-        width: 55%;
+        width: 50%;
     }
     .informationRight::before{
-        font-size: 16px;
+        font-size: 0.6em;
         height: 70vw;
-        width: 55%;
+        width: 50%;
     }
     .informationLeft::after{
         height: 70vw;
-        width: 60%;
+        width: 56%;
     }
     .informationMiddle::after{
         height: 70vw;
-        width: 60%;
+        width: 56%;
     }
     .informationRight::after{
         height: 70vw;
-        width: 60%;
+        width: 56%;
     }
     .informationLeft.hovered h1{
         margin-top: -5.5em;

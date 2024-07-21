@@ -104,7 +104,7 @@ const Navbar = ({setLogin, setShowCart}) => {
                 <li><Link onMouseEnter={() => {setItem('dresses')}} onMouseLeave={()=>{setItem(menu)}} onClick={()=>{setMenu("dresses"); press_toggle()}} style={{textDecoration: 'none', color:"#cdcecc"}} to ='/dresses'>Dresses</Link><h id="dresses"/></li>                
             </ul>
             {/* <input type="text" className='nav-searchInput' onChange={e => setSearchData(e.target.value)} placeholder='Search Here...' /> */}
-            <div className="nav-login-cart">
+            <div className={`nav-login-cart ${localStorage.getItem('auth-token')? "cartLogin": ""}`}>
                 {/* Displaying the search Icon */}
                 {/* <lord-icon
                     src="https://cdn.lordicon.com/kkvxgpti.json"
@@ -113,12 +113,12 @@ const Navbar = ({setLogin, setShowCart}) => {
                     colors="primary:#CFCCCC"> 
                 </lord-icon> */}
                 {/*Displaying the login button*/}
-                {localStorage.getItem('auth-token')? <div className='userDetails'><UserIcon/></div>: <></>}
+                {localStorage.getItem('auth-token')?<Link style={{textDecoration: 'none'}} to='/userinfo'><div className='userDetails'><UserIcon/></div></Link>: <></>}
                 {localStorage.getItem('auth-token')?
                 <button onClick={()=>{localStorage.removeItem('auth-token'); window.location.replace('/')}}><h5>Logout</h5><div className="black"></div></button>:
                 <Link id='loginButton' onClick={()=>{setMenu("nothing"); setLogin(true)}} ><button><h5>Login</h5><div className="black"></div></button></Link>}
                 <Link className='nav-login-cart-img' onClick={()=>{setMenu("nothing"); {location==="/cart"?<></>:setShowCart(true)}}}><img src={cart_icon} alt="" /></Link>
-                <div className='nav-cart-count'>{getTotalCartItems()}</div>
+                <div className={`nav-cart-count ${localStorage.getItem('auth-token')?"":"no-auth-count"}`}>{getTotalCartItems()}</div>
             </div>
         </div>
     )

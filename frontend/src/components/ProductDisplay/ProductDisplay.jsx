@@ -17,7 +17,7 @@ const ProductDisplay = (props) => {
  
     useEffect(()=>{
         getProduct(productId);
-    },[product])
+    },[productId])
 
     const getLogin = () => {
         const btn = document.getElementById('loginButton');
@@ -59,14 +59,18 @@ const ProductDisplay = (props) => {
                 <div className="productdisplay-right-size">
                     <h1>Select Size</h1>
                     <div className="productdisplay-right-sizes">
-                        <button className={selected==='S'?"isSelected":""} onClick={()=>{setSelected('S')}}>S</button>
-                        <button className={selected==='M'?"isSelected":""} onClick={()=>{setSelected('M')}}>M</button>
-                        <button className={selected==='L'?"isSelected":""} onClick={()=>{setSelected('L')}}>L</button>
-                        <button className={selected==='XL'?"isSelected":""} onClick={()=>{setSelected('XL')}}>XL</button>
-                        <button className={selected==='XXL'?"isSelected":""} onClick={()=>{setSelected('XXL')}}>XXL</button>
+                    {product.size && Object.keys(product.size).length>0 ? product.size.map(sizes =>
+                        <button
+                            key={sizes}
+                            className={selected === sizes ? "isSelected" : ""}
+                            onClick={() => setSelected(sizes)}
+                        >
+                            {sizes}
+                        </button>
+                    ): "No Size Available Currently"}
                     </div>
                 </div>
-                <div onClick={() => {{localStorage.getItem('auth-token')?addToCart(product.id):getLogin()}}}>
+                <div onClick={() => {{localStorage.getItem('auth-token')?selected!==''?addToCart(product.id,selected):alert("Please select a size"):getLogin()}}}>
                     <AddToCart></AddToCart>
                 </div>
             </div>

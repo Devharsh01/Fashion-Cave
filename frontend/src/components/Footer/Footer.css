@@ -157,9 +157,10 @@
 
 @media(max-width: 600px){
     .footer-details{
-        gap: 10vw;
+        gap: 6vw;
+        padding-left: 10px;
     }
     .footer-left{
-        font-size: 0.7rem;
+        font-size: 0.6em;
     }
 }

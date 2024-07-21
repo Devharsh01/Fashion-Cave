@@ -74,8 +74,9 @@
 
 .cartitems-format-main{
     display: grid;
-    grid-template-columns: 0.5fr 2fr 1fr 1fr 1fr;
+    grid-template-columns: 0.5fr 2fr 1fr 2fr 1fr;
     align-items: center;
+    text-align: center;
     gap: 45px;
     padding: 15px 0px;
     color: #d3d3d3;
@@ -85,7 +86,8 @@
 
 .cartitems-format-mainHalf{
     display: grid;
-    grid-template-columns: 1fr 2fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 2fr 1fr 2fr 1fr;
+    text-align: center;
     align-items: center;
     gap: 25px;
     padding: 20px 20px;
@@ -106,6 +108,7 @@
 
 .cartitems-formatHalf{
     font-size: 16px;
+    padding: 20px 5px;
     font-weight: 500;
 }
 
@@ -113,24 +116,43 @@
     height: 100px;
 }
 
-.cartitems-quantity{
-    font-size: 20px;
+.cartitems-quantityAll{
     display: flex;
-    justify-content: space-evenly;
+    text-align: center;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.cartitems-quantity{
+    font-size: 18px;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
     align-items: center;
-    margin-left: -30px;
-    padding-right: 40px;
 } 
 
+.cartitems-quantity div{
+    width: 20px;
+    height: 20px;
+}
+
 .cartitems-quantityHalf{
-    font-size: 20px;
+    font-size: 18px;
     display: flex;
-    justify-content: space-evenly;
+    gap: 10px;
+    justify-content: center;
     align-items: center;
+}
+
+.cartitems-quantityHalf div{
+    width: 20px;
+    height: 20px;
 }
 
 .cartitems-down{
     display: flex;
+    align-items: center;
+    justify-content: center;
     margin: 100px 0px;
 }
 
@@ -146,7 +168,6 @@
     flex: 1;
     display: flex;
     flex-direction: column;
-    margin-right: 200px;
     font-size: 18px;
     gap: 20px;
 }
@@ -222,12 +243,12 @@
 }
 
 .cartitems-final{
-    padding-right: 60px;
     padding-top: 20px;
 }
 
 .cartitems-promocode{
     flex: 1;
+    padding-right: 10vw;
     font-size: 16px;
     font-weight: 500;
 }
@@ -264,30 +285,16 @@
 }
 
 @media(max-width:1280px){
-    .cartitems{
-        margin: 10vw 60px 0px 80px;
-    }
     .cartitems-format-main{
-        grid-template-columns: 0.5fr 3fr 0.5fr 0.5fr 0.5fr 0.5fr;
-        gap: 20px;
-        padding: 15px 0px;
+        grid-template-columns: 0.5fr 2fr 1fr 2fr 1fr;
         font-size: 15px;
-    }
-    .cartitems-product-icon{
-        height: 50px;
-    }
-    .cartitems-quantity{
-        width: 40px;
-        height: 30px;
     }
     .cartitems-total{
         margin: 0px;
     }
-    .cartitems-down{
-        gap: 50px;
-    }
     .cartitems-promocode{
         width:40vw;
+        padding-right: 8vw;
     }
     .cartitems-promobox input{
         width: 100%;
@@ -302,19 +309,9 @@
     .cartitems-nameHalf{
         font-size: 11px;
     }
-    .cartitems-priceHalf{
-        transform: translateX(15px);
-    }
-    .cartitems-totalPriceHalf{
-        transform: translateX(15px);
-    }
     .cartitems-quantityHalf{
-        transform: translateX(10px);
+        font-size: 14px;
         gap: 5px;
-    }
-    .cartitems-quantity{
-    transform: translateX(20px);
-        gap: 15px;
     }
     .cartitems-displayHalf{
         max-height: 26vw;
@@ -338,6 +335,10 @@
     .cartitems{
         margin: 12vw 60px 0px 80px;
     }
+    .cartitems-format-mainHalf{
+        gap: 0px;
+        font-size: 15px;
+    }
     .cartitems-displayHalf{
         max-height: 29vw;
     }
@@ -346,6 +347,14 @@
     }
     .cartitems-nameHalf{
         font-size: 10px;
+    }
+    .cartitems-quantityHalf{
+        align-items: center;
+    }
+    .cartitems-quantityHalf div{
+        width: 12px;
+        transform: translateY(-3px);
+        height: 12px;
     }
     .cartitems-buttonHalf{
         width: 200px;
@@ -377,6 +386,18 @@
     .cartitems-format-mainHalf{
         grid-template-columns: 1fr 1fr 1fr 1fr;
         gap: 10px;
+        font-size: 13px;
+    }
+    .cartitems-format{
+        font-size: 12px;
+    }
+    .cartitems-quantity{
+        font-size: 12px;
+        gap: 15px;
+    }
+    .cartitems-quantity div{
+        width: 20px;
+        height: 20px;
     }
     .cartitems-formatHalf{
         display: grid;
@@ -425,42 +446,51 @@
 
 @media(max-width: 600px) {
     .cartitems{
-        margin: 18vw 30px 0px 30px;
+        margin: 20vw 30px 0px 30px;
+    }
+    .cartitems-product-icon{
+        width: 72px;
+        height: 72px;
+    }
+    .cartitems-title{
+        display: none;
+    }
+    .cartitems-name{
+        display: none;
+    }
+    .cartitems-format-main{
+        grid-template-columns: 1fr 1fr 2fr 1fr;
+        gap: 0px   ;
+    }
+    .cartitems-format-mainHalf{
+        font-size: 14.5px;
     }
     .cartitems-format{
         font-size: 13px;
     }
-    .cartitems-quantity{
-        gap: 5px;
-        font-size: 15px;
-        width: 25px;
-        height: 20px;
-    }
     .cartitemsHalf{
-        animation: animateIn 1s ease-in-out;
+        animation: animateInMobile 1s ease-in-out;
         width: 100vw;
         margin-left: 0;
     }
     .cartitems-displayHalf{
-        max-height: 40vw;
+        max-height: 230px;
     }
     .cartitems-downHalf{
-        margin-top: 57vw;
+        margin-top: 300px;
     }
     .cartitems-cross{
-        margin-left: 87vw;
+        margin-left: 90vw;
     }
     .cartitems-priceHalf{
         transform: translateX(5px);
-    }
-    .cartitems-totalPriceHalf{
-        transform: translateX(15px);
     }
     .cartitems-quantityHalf{
         transform: translateX(-10px);
     }
     .cartitems-down{
         flex-direction: column;
+        align-items: start;
         gap: 30px;
     }
     .cartitems-total{

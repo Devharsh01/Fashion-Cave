@@ -16,7 +16,7 @@ const ShopCategory = (props) => {
     const [shownProducts, setShownProducts] = useState([]);             //List of displayed products
     const [count, setCount] = useState(0);                              //Count of new added items
     const [animateShadow, setAnimateShadow] = useState(false);          //Animate the box shadow on load-more
-    const [hasMore, setHasMore] = useState(true);                       //Tells more items are to be loaded or not
+    const [hasMore, setHasMore] = useState(false);                       //Tells more items are to be loaded or not
     const [isHovered, setIsHovered] = useState(false);                  //Manage Sort-by button color
     const [isClicked, setIsClicked] = useState(false);                  //Sort-by Button clicked or not
     const [isFilterHovered, setIsFilterHovered] = useState(false);      //Manage Filter-by button color

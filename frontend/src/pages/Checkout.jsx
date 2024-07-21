@@ -31,7 +31,7 @@ const Checkout = () => {
                         'auth-token':`${localStorage.getItem('auth-token')}`,
                         'Content-Type':'application/json',
                     },
-                    body:JSON.stringify({"quantity": getTotalCartItems(), "amount": parseInt(getTotalCartAmount(),10), "items":orders})
+                    body:JSON.stringify({"items":orders})
                 })
                 .then((response)=>response.json()).then((data)=>resp = data)
                 console.log("Card",resp)
@@ -54,7 +54,7 @@ const Checkout = () => {
                         'auth-token':`${localStorage.getItem('auth-token')}`,
                         'Content-Type':'application/json',
                     },
-                    body:JSON.stringify({"quantity": getTotalCartItems(), "amount": parseInt(getTotalCartAmount(),10), "items":orders})
+                    body:JSON.stringify({"items":orders})
                 })
                 .then((response)=>response.json()).then((data)=>resp = data)
                 console.log("Cash",resp)

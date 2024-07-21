@@ -2,28 +2,22 @@ import React, { createContext, useState, useEffect} from "react";
 export const ShopContext = createContext();
 let port = 4000;
 
-const getDefaultCart = () => {
-    let cart = {};
-    for (let index = 0; index < 300+1; index++)
-    {   cart[index] = 0;           }
-    return cart;
-}
-
 const ShopContextProvider = (props) => {
     const [all_product,setAll_Product] = useState([]);
     const [filteredProducts, setFilteredProducts] = useState([]);
     const [allPromos,setAllPromos] = useState([]);
-    const [cartItems, setCartItems] = useState(getDefaultCart());
+    const [cartItems, setCartItems] = useState({});
     const [range, setRange] = useState({min: 0, max: 5000})
     const [checkedSizes, setCheckedSizes] = useState([]);
     const [product, setProduct] = useState([]);
     const [promoCode, setPromoCode] = useState(0);
-    const [orderData, setOrderData] = useState([])
+
+    //http://localhost:4000
     let url = `https://fashion-cave-backend.onrender.com`
 
     //For the first rendering of products on the webpage
     useEffect(()=>{
-        fetch(`${url}/allproducts`).then((response)=>response.json())
+        fetch(`${url}/allproducts`).then((response)=>response.json())   
         .then((data)=>{setAll_Product(data);setFilteredProducts(data)});
         
         fetch(`${url}/allpromos`).then((response)=>response.json())
@@ -46,8 +40,14 @@ const ShopContextProvider = (props) => {
     },[range,checkedSizes])
 
     /* Used to add items into the cart */
-    const addToCart = (itemID) => {
-        setCartItems((prev) => ({...prev, [itemID]:prev[itemID]+1}))
+    const addToCart = (itemId,selected) => {
+        setCartItems((prev) => {
+            const existingItems = prev[itemId] || [];
+            return{
+                ...prev, 
+                [itemId]:[...existingItems, selected]
+            }
+        })
         if(localStorage.getItem('auth-token')){
             fetch(`${url}/addtocart`,{
                 method:"POST",
@@ -56,7 +56,7 @@ const ShopContextProvider = (props) => {
                     'auth-token':`${localStorage.getItem('auth-token')}`,
                     'Content-Type':'application/json',
                 },
-                body:JSON.stringify({"itemId":itemID})
+                body:JSON.stringify({"itemId":itemId, "size":selected})
             })
             .then((response)=>response.json())
             .then((data)=>console.log(data))
@@ -64,8 +64,25 @@ const ShopContextProvider = (props) => {
     }
     
     /* Used to remove items from the cart */
-    const removeFromCart = (itemID) => {
-        setCartItems((prev) => ({...prev, [itemID]:prev[itemID]-1}))
+    const removeFromCart = (itemId,selected) => {
+        setCartItems((prev) => {
+            const existingItems = prev[itemId] || [];
+            if(existingItems.length>0) {
+                const index = existingItems.indexOf(selected);
+                if(index>-1) {
+                    existingItems.splice(index,1);
+                }
+                if(existingItems.length === 0) {
+                    const { [itemId]: removed, ...rest}= prev;
+                    return rest;
+                }
+                return {
+                    ...prev,
+                    [itemId]: existingItems
+                }
+            };
+            return prev
+        })
         if(localStorage.getItem('auth-token')){
             fetch(`${url}/removefromcart`,{
                 method:"POST",
@@ -74,11 +91,10 @@ const ShopContextProvider = (props) => {
                     'auth-token':`${localStorage.getItem('auth-token')}`,
                     'Content-Type':'application/json',
                 },
-                body:JSON.stringify({"itemId":itemID})
+                body:JSON.stringify({"itemId":itemId,"size":selected})
             })
             .then((response)=>response.json())
             .then((data)=>console.log(data))
-            
         }
     }
     
@@ -86,10 +102,9 @@ const ShopContextProvider = (props) => {
         let totalAmount = 0;
         for(const item in cartItems)
         {
-            if(cartItems[item] > 0)
-            {
-                let itemInfo = all_product.find((product)=>product.id===Number(item))
-                totalAmount += itemInfo.new_price * cartItems[item];
+            let itemInfo = all_product.find((product)=>product.id===Number(item))
+            if(itemInfo) {
+                totalAmount += itemInfo.new_price * cartItems[item].length;
             }
         }
         totalAmount -= ((totalAmount*promoCode)/100);
@@ -100,10 +115,8 @@ const ShopContextProvider = (props) => {
         let totalItem = 0;
         for(const item in cartItems)
         {
-            if(cartItems[item] > 0)
-            {
-                totalItem+= cartItems[item];
-            }
+            if(cartItems[item])
+                totalItem+= cartItems[item].length;
         }
         return totalItem;
     }
@@ -143,11 +156,12 @@ const ShopContextProvider = (props) => {
 
     const getOrderProducts = async () => {
         const orderDataPromises = [];
-        for (let productId = 0; productId < Object.keys(cartItems).length-1; productId++) {
-            if (cartItems[productId] > 0) {
+        for (const productId in cartItems) {
+            if (cartItems[productId]) {
                 const productDetailsPromise = fetchProductDetails(productId).then(product => ({
                     ...product,
-                    quantity: cartItems[productId]
+                    size: cartItems[productId],
+                    quantity: cartItems[productId].length
                 }));
                 orderDataPromises.push(productDetailsPromise);
             }
@@ -158,7 +172,25 @@ const ShopContextProvider = (props) => {
         return orderDataFinal
     }
 
-    const contextValue = {getTotalCartItems, all_product, cartItems, orderData,  addToCart, removeFromCart, getTotalCartAmount, allPromos, setRange, filteredProducts, setCheckedSizes, getProduct, product, gettingCart, promoCode, getOrderProducts, setPromoCode, url};
+    const getUserInfo = async () => {
+        if(localStorage.getItem('auth-token')){
+            let response = await fetch(`${url}/userDetails`,{
+                method:"POST",
+                headers:{
+                    Accept:"Application/form-data",
+                    'auth-token':`${localStorage.getItem('auth-token')}`,
+                    'Content-Type':'application/json',
+                },
+                body: JSON.stringify({}),
+            })
+            let responseF = await response.json();
+            if(responseF.success){
+                return responseF.user;
+            }
+        }
+    }
+
+    const contextValue = {getTotalCartItems, all_product, cartItems,  addToCart, removeFromCart, getTotalCartAmount, allPromos, setRange, filteredProducts, setCheckedSizes, getProduct, product, gettingCart, promoCode, getOrderProducts, setPromoCode, url, getUserInfo};
     return(
         <ShopContext.Provider value={contextValue}>
             {props.children}

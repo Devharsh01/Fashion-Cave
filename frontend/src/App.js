@@ -14,6 +14,7 @@ import kids_banner from './components/Assets/banner_dress.png'
 import Preloader from './components/Preloader/Preloader.jsx'
 import CartItems from './components/CartItems/CartItems.jsx'
 import Checkout from './pages/Checkout.jsx';
+import UserInfo from './components/UserInfo/UserInfo.jsx';
 
 function App() {
   useEffect(()=>{
@@ -37,6 +38,7 @@ function App() {
         </Route>  
         <Route path='/cart' element={<Cart/>}/>
         <Route path='/checkout' element={<Checkout/>}/>
+        <Route path='/userinfo' element={<UserInfo/>}/>
       </Routes>
       <Footer/>
       </BrowserRouter>

@@ -179,20 +179,6 @@
   margin-top: 7px;
 }
 
-@media only screen and (max-width: 480px) {
-  .container {
-    transform: scale(0.7);
-  }
-
-  .container:hover {
-    transform: scale(0.74);
-  }
-
-  .new {
-    font-size: 18px;
-  }
-}
-
 .buttons {
   width: 6.5px;
   height: 6.5px;
@@ -419,20 +405,45 @@
 }
 
 @media (max-width: 600px) {
+  .payment-button-container{
+    justify-content: center;
+    margin-left: 0;
+  }
   .payment-container{
-    height: 80vw;
+    height: 500px;
+  }
+  .payment-description{
+    font-size: 24px;
   }
   .container{
-    width: 40vw;
-    height: 15vw;
+    width: 180px;
+    height: 80px;
+  }
+  .container {
+    transform: scale(1);
+  }
+  .container:hover {
+    transform: scale(1);
   }
   .container:hover{
     width: 30vw;
   }
   .left-side{
-    height: 15vw;
+    height: 80px;
+    width: 90px;
   }
   .payment-back-button{
-    height: 15vw;
+    width: 150px;
+    height: 80px;
+  }
+  .payment-back-button:hover .payment-inner-button {
+    width: 140px; /* 184px */
+  }
+  .new{
+    font-size: 14px;
+    margin-left: 5px;
+  }
+  .payment-button-text{
+    font-size: 17px;
   }
 }
