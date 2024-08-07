@@ -1,6 +1,6 @@
 import React from "react";
 import './Navbar.css'
-import navlogo from '../../assets/nav-logo.svg'
+import navlogo from '../../assets/logo_small1.jpg'
 import navProfile from '../../assets/nav-profile.svg'
 
 const Navbar = () =>{

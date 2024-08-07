@@ -15,11 +15,7 @@ const ListProduct = () =>{
         .then((data)=>{setAllProducts(data)});
         console.log("Info Fetched")
     }
-
-    useEffect(()=>{
-        console.log("All products", allproducts, allproducts.length)
-    },[allproducts])
-
+    
     useEffect(() => {
         fetchInfo();
         console.log("Fetching Info")

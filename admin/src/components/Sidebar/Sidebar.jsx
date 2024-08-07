@@ -25,13 +25,13 @@ const Sidebar = () => {
                     <p>User List</p>
                 </div>
             </Link>
-            <Link to={'/ordersPending'} style={{textDecoration:"none"}}>
+            <Link to={'/orders?status=Pending'} style={{textDecoration:"none"}}>
                 <div className="sidebar-item">
                     <img src={list_product_icon} alt="" />
                     <p>Orders Pending</p>
                 </div>
             </Link>
-            <Link to={'/ordersCompleted'} style={{textDecoration:"none"}}>
+            <Link to={'/orders?status=Completed'} style={{textDecoration:"none"}}>
                 <div className="sidebar-item">
                     <img src={list_product_icon} alt="" />
                     <p>Orders Completed</p>

@@ -9,10 +9,6 @@ import cross_icon from '../Assets/cart_cross_icon.png'
 
 const CartItems = ({showCart, setShowCart}) => {
     const {all_product, cartItems, sizeSelected, addToCart, removeFromCart, getTotalCartAmount, allPromos,setPromoCode, promoCode} = useContext(ShopContext);
-    const [addHover, setAddHover] = useState(false)             //For Add Button Color Change
-    const [substractHover, setSubstractHover] = useState(false)     //For Substract Button Color Change
-    const [idHover, setIdHover] = useState(0)                   //For Specific id Button Color Change
-    const [sizeHover, setSizeHover] = useState('')                   //For Specific size Button Color Change
     const [inputValue, setInputValue] = useState('');
     const [isSliding, setIsSliding] = useState(false);
     const [redirect, setRedirect] = useState(false);

@@ -17,6 +17,7 @@ exports.addProduct = async (req, res) =>{
         category: req.body.category,
         new_price: req.body.new_price,
         old_price: req.body.old_price,
+        size: req.body.size,
     });
     console.log(product);
     try{
@@ -47,5 +48,21 @@ exports.product = async (req,res)=>{
     }
     else{
         res.status(200).send(prod)
+    }
+}
+
+exports.removeProduct = async (req, res) => {
+    const del = await Product.deleteOne({id:req.body.id});
+    if(!del) {
+        res.status(404).json({
+            success: false,
+            errors: "Product not found"
+        })
+    }
+    else {
+        res.status(200).json({
+            success: true,
+            message: "Item Deleted"
+        })
     }
 }

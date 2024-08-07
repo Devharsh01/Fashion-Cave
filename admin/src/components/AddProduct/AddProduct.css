@@ -10,7 +10,7 @@
 
 .addproduct-itemfield{
     width: 100%;
-    color: #7b7b7b;
+    color: #1b1b1b;
     font-size: 16px;
 }
 
@@ -35,7 +35,7 @@
 .add-product-selector{
     padding: 10px;
     height: 50px;
-    width: 100px;
+    width: fit-content;
     font-size: 14px;
     color: #7b7b7b;
     border: 1px solid #7b7b7b8d;
@@ -61,6 +61,26 @@
     color: white;
     font-size: 16px;
     font-weight: 500;
+}
+
+.size{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.size div{
+    padding: 10px;
+    border: 1px solid #000;
+    cursor: pointer;
+}
+
+.selected{
+    background-color: beige;
+}
+
+.imageInput{
+    margin-top: 15px;
 }
 
 @media(max-width:800px){

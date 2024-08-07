@@ -1,56 +1,12 @@
-.users{
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-    overflow-x: hidden;
-}
-
-.listusers-allusers hr{
-    width: 100%;
-    background-color: black;
-    height: 5px;
-    border: none;
-}
-
-.users-heading{
-    display: flex;
-    justify-content: space-around;
-    flex-direction: row;
-    align-items: center;
-}
-
-.users-heading input{
-    height: 35px;
-    border: none;
-    font-size: 16.7px;
-    border-bottom: 2px solid #000;
-}
-
-.users-heading input:focus-visible{
-    outline: none;
-}
-
-.userinfo-alldetails{
-    display: flex;
-    flex-direction: column;
-}
-
-.userinfo_content{
+.ordersList-heading{
     display: flex;
     flex-direction: row;
     align-items: center;
-    font-size: 16px;
+    gap: 60px;
 }
 
-.userinfo_content p{
-    font-weight: 600;
-    gap: 0;
-    margin: 5px 0;
-    white-space: pre;
-}
-
-.userinfo-orders{
-    width: 70%;
+.ordersList-input{
+    font-size: 18px;
 }
 
 .orderDescription{
@@ -103,7 +59,31 @@
     font-size: 20px;
 }
 
+.orderimage{
+    margin-right: -40px;
+}
+
 .orderimage img{
     width: 60%;
     height: auto;
+}
+
+.orderlist-buttons{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 30px;
+}
+
+.orderlist-buttons button{
+    border-radius: 30px;
+    border: 2px solid #3f3f3f;
+}
+
+.checkButton:hover{
+    background-color: rgb(24, 117, 24);
+}
+
+.cancelButton:hover{
+    background-color: rgb(168, 30, 30);
 }

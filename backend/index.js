@@ -17,6 +17,7 @@ const paymentController = require('./Controllers/paymentController')
 const productController = require('./Controllers/productController')
 const promoController = require('./Controllers/promoController')
 const userController = require('./Controllers/userController')
+const orderController = require('./Controllers/orderController')
 
 app.use(express.json());
 app.use(cors({
@@ -67,6 +68,7 @@ const fetchUser = async (req,res,next) =>{
 app.post('/addproduct', productController.addProduct)
 app.get('/allproducts', productController.allProducts)
 app.get('/product/:productId', productController.product)
+app.post('/removeproduct', productController.removeProduct)
 
 //Promo Code Details
 app.post('/addpromo', promoController.addPromo)
@@ -86,16 +88,20 @@ app.post('/getcart',fetchUser, cartController.gettingCart)
 
 //Updating the Order Data
 app.post('/update-address',fetchUser, updateController.address)
-app.post('/orderSuccess',fetchUser, updateController.statusSuccess)
+app.post('/orderSuccess',fetchUser, updateController.statusPaid)
 app.post('/orderFailed',fetchUser, updateController.statusFailed)
+app.post('/updateStatus', updateController.statusUpdate)
 
-//Payment 
-app.post('/paymentCard',fetchUser, paymentController.payCard)
+//Payment Updates and Order Create
+app.post('/paymentCard',fetchUser, paymentController.payCard)   
 app.post('/paymentCOD',fetchUser, paymentController.payCOD)
 
 //User Details
 app.get('/allusers', userController.allUsers)
 app.post('/userDetails', fetchUser, userController.userDetails)
+
+//Order Details
+app.get('/allOrders', orderController.allOrders)
 
 app.listen(port, (error)=>{
     if (!error) {
