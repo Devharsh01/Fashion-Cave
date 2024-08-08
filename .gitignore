@@ -1,2 +1,2 @@
-backend/env
-admin/env
+backend/.env
+admin/.env
