@@ -3,6 +3,7 @@ import './CSS/Checkout.css'
 import Address from '../components/Address/Address'
 import { ShopContext } from '../context/ShopContext';
 import { useSearchParams } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import PaymentGateway from '../components/PaymentGateway/PaymentGateway';
 import OrderReceipt from '../components/OrderReceipt/OrderReceipt';
 
@@ -10,13 +11,21 @@ const Checkout = () => {
     const [current, setCurrent] = useState('address')
     const {getOrderProducts, getTotalCartItems, getTotalCartAmount, orderData, url} = useContext(ShopContext)
     const [searchParams, setSearchParams] = useSearchParams();
-    const success = searchParams.get("success");
-    const order = searchParams.get("order")
+    const [success, setSuccess] = useState(null);
+    const [order, setOrder] = useState(null);
+    const navigate = useNavigate();
+
+    useEffect(()=>{
+        setSuccess(searchParams.get("success"));
+        setOrder(searchParams.get("order"));
+        if(success != null && order != null)
+                setCurrent('orderVerify')
+    },[]) 
 
     useEffect(()=>{
         if(success != null && order != null)
                 setCurrent('orderVerify')
-    },[]) 
+    },[success, order])
     
     useEffect(()=>{
         if(current == "paymentCard") {
@@ -59,8 +68,11 @@ const Checkout = () => {
                 .then((response)=>response.json()).then((data)=>resp = data)
                 console.log("Cash",resp)
                 if(resp.success) {
-                    window.location.replace(`${window.location.origin}/checkout?success=true&order=${resp.orderId}`)
-                }
+                    navigate(`?success=true&order=${resp.orderId}`);
+                    setSuccess("true");
+                    setOrder(resp.orderId);
+                    // window.location.replace(`${window.location.origin}/checkout?success=true&order=${resp.orderId}`)
+                } 
             }
             console.log("FETCHING COD")
             fetchOrderCOD();

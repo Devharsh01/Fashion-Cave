@@ -19,7 +19,7 @@ const Popular = () => {
       let shownPopularProducts = popularFilter.slice(0,4);
       console.log(popularFilter, shownPopularProducts, shownPopularProducts.length)
       setPopularProducts(shownPopularProducts)
-    }, [])
+    }, [all_product])
 
     const popularRef = useRef(null);
     gsap.registerPlugin(ScrollTrigger);

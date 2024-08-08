@@ -3,7 +3,7 @@ import './Address.css'
 import { ShopContext } from '../../context/ShopContext';
 
 const Address = ({changeCurrent}) => {
-    const {getUserInfo} = useContext(ShopContext)
+    const {getUserInfo, url} = useContext(ShopContext)
     const [addressFormData, setAddressFormData] = useState({                      //Input values storage
         first_name:"",
         middle_name:"",
@@ -26,7 +26,7 @@ const Address = ({changeCurrent}) => {
 
     useEffect(()=>{
         if(successfulClick) {
-            fetch(`http://localhost:4000/update-address`,{
+            fetch(`${url}/update-address`,{
                 method:"POST",
                 headers:{
                     Accept:"Application/form-data",
