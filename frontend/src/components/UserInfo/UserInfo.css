@@ -7,7 +7,6 @@
     width: 25%;
     background: #020202;
     color: white;
-    transition: all 0.5s ease-in;
     position:fixed;
     height: fit-content;
     text-align: center;
@@ -155,9 +154,13 @@
     }
     .userinfo-left{
         width: 80%;
+        transition: all 0.5s ease-in;
         border-radius: 30px;
         margin-left: 10%;
         box-shadow: 0px 1px 5px 3px #727272;
+    }
+    .headingHeight{
+        margin-top: -5vw;
     }
     .userinfo-left ul{
         display: flex;
@@ -214,6 +217,9 @@
 @media (max-width: 450px) {
     .userinfo{
         margin-top: 28vw;
+    }
+    .headingHeight{
+        margin-top: -12vw;
     }
     .contents{
         font-size: 20px;

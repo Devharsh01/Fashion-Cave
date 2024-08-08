@@ -22,6 +22,17 @@ const UserInfo = () => {
             const viewportHeight = window.innerHeight;
             const viewportWidth = window.innerWidth;
 
+            // Manage top height after scroll in tablets and mobiles
+            if(window.innerWidth<800 && window.scrollY > 0 && !stickyElement.classList.contains('headingHeight')){
+                stickyElement.classList.add('headingHeight')
+            }
+            else if(window.innerWidth<800 && window.scrollY === 0 && stickyElement.classList.contains('headingHeight')){
+                stickyElement.classList.remove('headingHeight')
+            }
+            else if(window.innerWidth>800 && stickyElement.classList.contains('headingHeight')) {
+                stickyElement.classList.remove('headingHeight');
+            }
+
             // Calculate the distance from the bottom of the reference element to the bottom of the viewport
             if(viewportWidth > 800) {
                 const distanceToBottom = viewportHeight - containerRect.bottom;

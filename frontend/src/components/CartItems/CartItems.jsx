@@ -72,16 +72,16 @@ const CartItems = ({showCart, setShowCart}) => {
                       }, {});                      
                     if(e){
                         return <div>    
-                                <div onMouseEnter={()=>{setIdHover(e.id)}} onMouseLeave={()=>{setIdHover(0)}} className={`${showCart ? "cartitems-formatHalf cartitems-format-mainHalf":"cartitems-format cartitems-format-main"}`}>
+                                <div className={`${showCart ? "cartitems-formatHalf cartitems-format-mainHalf":"cartitems-format cartitems-format-main"}`}>
                                     <img src={e.image} alt="" className="cartitems-product-icon" />
                                     <p className={`${showCart ?"cartitems-nameHalf":"cartitems-name"}`} >{`${e.name} (Size ${size}) `}</p>
                                     <p className={`${showCart ?"cartitems-priceHalf":"cartitems-price"}`}>${e.new_price}</p>
                                     <div className="cartitems-quantityAll">
                                         {Object.entries(sizeCount).map(([size, count]) => (
-                                            <div className={`${showCart?"cartitems-quantityHalf":"cartitems-quantity"}`} onMouseEnter={()=>{setSizeHover(size)}} onMouseLeave={()=>{setSizeHover('')}}>
-                                                <div onMouseEnter={()=>{setAddHover(true)}} onMouseLeave={()=>{setAddHover(false)}} onClick={()=>{addToCart(e.id,size)}}><AddIcon color={`${showCart?"#000":"#fff"}`}></AddIcon></div>
+                                            <div className={`${showCart?"cartitems-quantityHalf":"cartitems-quantity"}`} >
+                                                <div onClick={()=>{addToCart(e.id,size)}}><AddIcon color={`${showCart?"#000":"#fff"}`}></AddIcon></div>
                                                 {count} / {size}
-                                                <div onMouseEnter={()=>{setSubstractHover(true)}} onMouseLeave={()=>{setSubstractHover(false)}} onClick={()=>{removeFromCart(e.id,size)}}><SubstractIcon color={`${showCart?"#000":"#fff"}`}></SubstractIcon></div>
+                                                <div onClick={()=>{removeFromCart(e.id,size)}}><SubstractIcon color={`${showCart?"#000":"#fff"}`}></SubstractIcon></div>
                                             </div>
                                         ))}
                                     </div>
