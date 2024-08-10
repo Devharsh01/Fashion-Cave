@@ -17,6 +17,16 @@ const Hero = () => {
     // const [currentImage, setCurrentImage] = useState(0);
     // let images = [hero_image, hero_image2]
 
+    const handleClick = () => {
+        const info = document.querySelector("#information");
+        if(info) {
+            window.scrollTo({
+                top: info.offsetTop - 100, 
+                behavior: 'smooth' // Smooth scrolling
+            });
+        }
+    }
+
     const { contextSafe } = useGSAP({scope: textRef});
     const mouseIn = contextSafe(() => {
         gsap.to("#hero-family", {
@@ -64,7 +74,7 @@ const Hero = () => {
                 <p id="hero-para" onMouseEnter={mouseIn} onMouseLeave={mouseOut}>Welcome to<span>&nbsp;</span><span id ="hero-family"></span><span>&nbsp;</span>Fashion Cave!!</p>
                 <p id="hero-para">We bring you one of the most amazing dresses all around the world with 100% guarantee of quality and color</p>
                 <div className='hero-button'>
-                    <button>About Us</button>
+                    <button onClick={() => {handleClick()}}>About Us</button>
                 </div>
             </div>
             <div className="hero-right">
